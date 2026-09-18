@@ -8,7 +8,7 @@ const { class: className, as: Tag = 'article' } = Astro.props;
 
 <Tag
   class:list={[
-    'reveal min-w-0 rounded-xl border border-line bg-card transition-colors hover:border-accent/25',
+    'reveal min-w-0 rounded-xl border border-line bg-card transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_14px_35px_-20px_color-mix(in_srgb,var(--accent)_55%,transparent)]',
     className,
   ]}
 >

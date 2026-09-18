@@ -8,13 +8,14 @@ interface Props {
   class?: string;
   priority?: boolean;
   fit?: 'cover' | 'contain';
+  aspectRatio?: string;
 }
-const { image, fallback, class: className, priority = false, fit = 'cover' } = Astro.props;
+const { image, fallback, class: className, priority = false, fit = 'cover', aspectRatio } = Astro.props;
 ---
 
 <div
   class:list={['media-frame rounded-lg', className]}
-  style={`aspect-ratio: ${image ? `${image.width} / ${image.height}` : '16 / 9'}`}
+  style={`aspect-ratio: ${aspectRatio ?? (image ? `${image.width} / ${image.height}` : '16 / 9')}`}
   data-fit={fit}
 >
   <div
@@ -22,7 +23,7 @@ const { image, fallback, class: className, priority = false, fit = 'cover' } = A
     aria-hidden={image ? 'true' : undefined}
   >
     <Icon name="image" size={28} class="text-muted" />
-    <span class="text-xs leading-relaxed text-body">{fallback}</span>
+    <span class="text-sm leading-relaxed text-body">{fallback}</span>
   </div>
   {image &&
     (typeof image.src === 'string' ? (

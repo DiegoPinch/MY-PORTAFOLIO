@@ -1,25 +1,25 @@
 import type { Experience, Feature } from '../types/content';
 export const principles: Feature[] = [
   {
-    title: 'Clean Architecture & SOLID',
+    title: 'Procesos más claros',
     icon: 'layers',
     tone: 'sky',
     description:
-      'Diseño en capas (Domain, Application, Infrastructure, Presentation) tanto en C# con .NET Core como en Node.js, facilitando la inyección de dependencias, desacoplamiento y testeo unitario sistemático.',
+      'Convierto procesos manuales en flujos digitales ordenados, para que el equipo encuentre la información y avance sin depender de hojas de cálculo dispersas.',
   },
   {
-    title: 'Seguridad e Integración API',
+    title: 'Sistemas que pueden crecer',
     icon: 'lock',
     tone: 'emerald',
     description:
-      'Implementación de autenticación y autorización segura con JSON Web Tokens (JWT), control de acceso basado en roles (RBAC), documentación interactiva Swagger/OpenAPI y alineación con guías de seguridad OWASP.',
+      'Construyo APIs y módulos separados para que añadir usuarios, reportes o nuevas funciones no obligue a rehacer todo el sistema.',
   },
   {
-    title: 'Contenedores & DevOps',
+    title: 'Entrega con menos riesgos',
     icon: 'box',
     tone: 'indigo',
     description:
-      'Contenerización de aplicaciones con Docker y Docker Compose para reproducibilidad de entornos de desarrollo y producción, control de versiones con Git/GitHub y flujos ágiles de entrega continua.',
+      'Documento las decisiones, organizo el código y preparo entornos reproducibles para facilitar el mantenimiento y la continuidad del proyecto.',
   },
 ];
 export const experience: Experience[] = [

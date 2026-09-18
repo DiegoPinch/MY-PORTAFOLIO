@@ -1,12 +1,16 @@
 export const profile = {
   name: 'Diego Fernando Pincha Lema',
+  heroName: 'Diego Fernando Pincha',
   shortName: 'Diego Pincha',
   cardName: 'Diego F. Pincha Lema',
   initials: 'DP',
-  role: 'Desarrollador de Software',
-  headline: 'Desarrollador de Software — .NET Core, Angular, Blazor & Soluciones Empresariales',
+  role: 'Artist / Developer',
+  headline: 'Artist / Developer — .NET Core, Angular, Blazor & Soluciones Empresariales',
+  heroIntro:
+    'Transformo procesos manuales en sistemas web que conectan operaciones, datos y personas.',
+  heroProof: 'Proyectos en exportaciones, servicios públicos y gestión académica.',
   availability: 'Disponible para proyectos y nuevos retos profesionales',
-  location: 'Latacunga, Ecuador',
+  location: 'Quito, Ecuador',
   country: 'Ecuador',
   phone: '+593 991586128',
   phoneHref: 'tel:+593991586128',
@@ -32,11 +36,17 @@ export const profile = {
   ],
 };
 
+export const socialLinks = [
+  { label: 'GitHub', href: profile.github, icon: 'github' },
+  { label: 'LinkedIn', href: profile.linkedin, icon: 'linkedin' },
+  { label: 'WhatsApp', href: profile.whatsapp, icon: 'whatsapp' },
+] as const;
+
 export const navigation = [
   { label: 'Trayectoria', href: '#trayectoria' },
   { label: 'Experiencia', href: '#experiencia' },
-  { label: 'Stack', href: '#stack' },
   { label: 'Proyectos', href: '#proyectos' },
+  { label: 'Stack', href: '#stack' },
   { label: 'Certificaciones', href: '#certificaciones' },
   { label: 'Contacto', href: '#contacto' },
 ];

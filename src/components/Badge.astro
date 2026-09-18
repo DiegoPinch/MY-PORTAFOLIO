@@ -10,7 +10,7 @@ const { tone, class: className } = Astro.props;
 
 <span
   class:list={[
-    'inline-flex items-center rounded border px-2 py-1 font-mono text-[10px] leading-relaxed',
+    'inline-flex items-center rounded border px-2 py-1 font-mono text-sm leading-relaxed',
     tone ? badgeClasses[tone] : 'border-transparent bg-subtle text-body',
     className,
   ]}

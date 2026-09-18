@@ -1,26 +1,73 @@
 ---
 import Card from './Card.astro';
+import Icon from './Icon.astro';
 import type { TechCategory } from '../types/content';
 interface Props {
   category: TechCategory;
 }
 const { category } = Astro.props;
+const iconFor = (skill: string) => {
+  if (skill.includes('ASP.NET')) return 'dotnet';
+  if (skill.startsWith('C#')) return 'csharp';
+  if (skill.includes('REST')) return 'fastapi';
+  if (skill.includes('Node')) return 'nodedotjs';
+  if (skill.includes('Angular')) return 'angular';
+  if (skill.includes('Blazor')) return 'blazor';
+  if (skill.includes('TypeScript')) return 'typescript';
+  if (skill.includes('HTML')) return 'html5';
+  if (skill.includes('Tailwind')) return 'tailwindcss';
+  if (skill.includes('SQL Server')) return 'microsoftsqlserver';
+  if (skill.includes('MySQL')) return 'mysql';
+  if (skill.includes('PostgreSQL')) return 'postgresql';
+  if (skill.includes('Entity')) return 'dotnet';
+  if (skill.includes('Docker')) return 'docker';
+  if (skill.includes('Git')) return 'github';
+  if (skill.includes('Swagger')) return 'swagger';
+  if (skill.includes('JWT')) return 'jsonwebtokens';
+  return 'code';
+};
 ---
 
-<Card class="flex flex-col justify-between p-5">
-  <div>
-    <p class="mb-2 font-mono text-[10px] uppercase tracking-wide text-muted">{category.eyebrow}</p>
-    <h3 class="mb-5 text-base font-semibold text-heading">{category.title}</h3>
-    <dl class="divide-y divide-line font-mono text-[10px]">
-      {category.skills.map((skill) => (
-        <div class="flex justify-between gap-3 py-2.5">
-          <dt class="text-body">{skill.name}</dt>
-          <dd class="shrink-0 text-accent">{skill.level}</dd>
-        </div>
-      ))}
-    </dl>
+<Card class="flex h-full flex-col p-5 sm:p-7">
+  <div class="mb-4 flex items-center gap-3">
+    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+      <Icon name={category.icon} size={21} />
+    </span>
+    <h3 class="text-xl font-semibold leading-snug text-heading">{category.title}</h3>
   </div>
-  <p class="mt-5 border-t border-line pt-4 font-mono text-[10px] leading-relaxed text-muted">
-    {category.note}
-  </p>
+  <p class="text-base leading-relaxed text-body">{category.description}</p>
+  <ul aria-label={`Tecnologías de ${category.title}`} class="mt-5 grid grid-cols-2 gap-2">
+    {category.skills.map((skill) => (
+      <li class="flex min-w-0 items-center gap-2 rounded-md border border-line bg-subtle/40 px-2.5 py-2 text-sm leading-relaxed text-body">
+        <span class="tech-mark" aria-hidden="true">
+          <img src={`https://cdn.simpleicons.org/${iconFor(skill)}`} alt="" loading="lazy" />
+        </span>
+        <span class="min-w-0 truncate">{skill}</span>
+      </li>
+    ))}
+  </ul>
 </Card>
+
+<style>
+  .tech-mark {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: color-mix(in srgb, var(--accent) 14%, var(--card));
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+  .tech-mark img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: brightness(1.15) saturate(1.1);
+  }
+</style>

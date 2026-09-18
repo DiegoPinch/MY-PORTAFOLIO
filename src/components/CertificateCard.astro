@@ -24,7 +24,7 @@ const { certificate: cert } = Astro.props;
         cert.featured && 'md:col-span-5 md:border-b-0 md:border-r',
       ]}
     >
-      <div class="mb-3 flex justify-between gap-3 font-mono text-[10px] uppercase">
+      <div class="mb-3 flex justify-between gap-3 font-mono text-sm uppercase">
         <span class:list={['font-semibold', toneClasses[cert.tone]]}>{cert.issuer}</span>
         {cert.year && <span class="text-muted">{cert.year}</span>}
       </div>
@@ -33,8 +33,8 @@ const { certificate: cert } = Astro.props;
       ) : (
         <div class="flex aspect-video flex-col items-center justify-center gap-3 rounded-lg border border-line bg-subtle/60 p-5 text-center">
           <Icon name={cert.icon} size={30} class={toneClasses[cert.tone]} />
-          <p class="max-w-xs text-xs font-semibold leading-relaxed text-heading">{cert.title}</p>
-          <span class="font-mono text-[9px] text-muted">{cert.issuer}</span>
+          <p class="max-w-xs text-sm font-semibold leading-relaxed text-heading">{cert.title}</p>
+          <span class="font-mono text-sm text-muted">{cert.issuer}</span>
         </div>
       )}
     </div>
@@ -42,18 +42,18 @@ const { certificate: cert } = Astro.props;
       class:list={['flex flex-col justify-between p-5', cert.featured && 'md:col-span-7 md:p-7']}
     >
       <div>
-        <h3 class="mb-3 text-sm font-semibold leading-relaxed text-heading">{cert.title}</h3>
-        <p class="text-xs leading-relaxed">{cert.description}</p>
+        <h3 class="mb-3 text-lg font-semibold leading-relaxed text-heading">{cert.title}</h3>
+        <p class="text-base leading-relaxed">{cert.description}</p>
       </div>
-      <div class="mt-5 flex items-center justify-between gap-3 border-t border-line pt-3">
-        <span class="font-mono text-[10px] text-muted">{cert.year ?? 'Formación lingüística'}</span>
+      <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-3">
+        <span class="font-mono text-sm text-muted">{cert.year ?? 'Formación lingüística'}</span>
         <button
           type="button"
           data-open-dialog={`certificate-${cert.id}`}
           aria-haspopup="dialog"
-          class="inline-flex min-h-11 items-center gap-2 font-mono text-xs text-accent hover:text-heading"
+          class="inline-flex min-h-11 items-center gap-2 font-mono text-sm text-accent transition-transform duration-200 hover:translate-x-1 hover:text-heading"
         >
-          {cert.image ? 'Ver certificado' : 'Ver detalles'}
+          {cert.image || cert.pdfUrl ? 'Ver certificado' : 'Ver detalles'}
           <Icon name="arrow-up-right" size={14} />
         </button>
       </div>
@@ -61,16 +61,23 @@ const { certificate: cert } = Astro.props;
   </div>
 </article>
 <Modal id={`certificate-${cert.id}`} title={cert.title}>
-  <p class="mb-5 font-mono text-xs text-accent">
+  <p class="mb-5 font-mono text-sm text-accent">
     {cert.issuer}
     {cert.year && ` · ${cert.year}`}
   </p>
   {cert.image && (
     <ResponsiveImage image={cert.image} fallback="No se pudo cargar el certificado" fit="contain" />
   )}
-  <p class="my-5 text-sm leading-relaxed">{cert.description}</p>
-  {!cert.image && (
-    <p class="rounded-lg border border-line bg-inset p-4 text-xs leading-relaxed text-muted">
+  <p class="my-5 text-base leading-relaxed">{cert.description}</p>
+  {cert.pdfUrl && (
+    <div class="my-5">
+      <Button href={cert.pdfUrl} external icon="download">
+        Abrir certificado PDF
+      </Button>
+    </div>
+  )}
+  {!cert.image && !cert.pdfUrl && (
+    <p class="rounded-lg border border-line bg-inset p-4 text-sm leading-relaxed text-muted">
       El documento digital todavía no está disponible en este portafolio.
     </p>
   )}

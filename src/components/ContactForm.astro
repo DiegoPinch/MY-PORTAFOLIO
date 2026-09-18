@@ -4,16 +4,16 @@ import { profile } from '../data/profile';
 import Icon from './Icon.astro';
 ---
 
-<div class="rounded-2xl border border-line bg-card p-6 sm:p-8">
+<div class="rounded-2xl border border-line bg-card p-5 sm:p-6">
   <form
     id="contact-form"
     data-recipient={profile.email}
     action={`mailto:${profile.email}`}
     method="get"
-    class="space-y-5"
+    class="space-y-4"
     aria-describedby="contact-help"
   >
-    <div class="grid gap-5 sm:grid-cols-2">
+    <div class="grid gap-4 sm:grid-cols-2">
       <div>
         <label class="field-label" for="contact-name">
           Nombre completo
@@ -39,7 +39,7 @@ import Icon from './Icon.astro';
           name="email"
           type="email"
           autocomplete="email"
-          placeholder="contacto@tuempresa.com"
+          placeholder="tu@correo.com"
           required
           maxlength="254"
         />
@@ -51,7 +51,7 @@ import Icon from './Icon.astro';
       </label>
       <select class="field" id="contact-topic" name="topic">
         {contactTopics.map((topic) => (
-          <option value={topic}>{topic}</option>
+          <option value={topic.value}>{topic.label}</option>
         ))}
       </select>
     </div>
@@ -60,7 +60,7 @@ import Icon from './Icon.astro';
         Mensaje / Detalle de la propuesta
       </label>
       <textarea
-        class="field min-h-36 resize-y"
+        class="field min-h-28 resize-y"
         id="contact-message"
         name="message"
         placeholder="Cuéntame sobre el puesto, proyecto o tecnologías requeridas…"
@@ -70,13 +70,13 @@ import Icon from './Icon.astro';
         rows="5"
       ></textarea>
     </div>
-    <p id="contact-help" class="text-xs leading-relaxed text-muted">
+    <p id="contact-help" class="text-sm leading-relaxed text-muted">
       Al continuar se abrirá tu aplicación de correo con el mensaje preparado. Podrás revisarlo y
       enviarlo desde allí.
     </p>
     <button
       type="submit"
-      class="flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-heading px-5 py-3 text-xs font-semibold uppercase tracking-wide text-canvas transition-opacity hover:opacity-85"
+      class="flex min-h-12 w-full items-center justify-center gap-3 rounded-lg bg-heading px-5 py-3 text-sm font-semibold uppercase tracking-wide text-canvas transition-opacity hover:opacity-85"
     >
       Preparar correo para Diego
       <Icon name="send" size={16} />
@@ -85,7 +85,7 @@ import Icon from './Icon.astro';
       id="form-feedback"
       role="status"
       aria-live="polite"
-      class="text-xs leading-relaxed text-accent"
+      class="text-sm leading-relaxed text-accent"
     ></p>
   </form>
 </div>

@@ -16,7 +16,7 @@ const { href, variant = 'primary', icon, external, class: className } = Astro.pr
   target={external ? '_blank' : undefined}
   rel={external ? 'noopener noreferrer' : undefined}
   class:list={[
-    'glow-link inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-5 py-3 text-xs font-semibold tracking-wide transition-colors',
+    'glow-link inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-5 py-3 text-sm font-semibold tracking-wide transition-colors',
     variant === 'primary'
       ? 'border-heading bg-heading text-canvas hover:opacity-85'
       : 'border-line bg-card text-heading hover:border-accent/50',

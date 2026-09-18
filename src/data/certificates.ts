@@ -1,6 +1,17 @@
 import type { Certificate } from '../types/content';
-// Agregar image y verificationUrl únicamente cuando se disponga del documento original.
-export const certificates: Certificate[] = [
+import type { ImageMetadata } from 'astro';
+
+const images = import.meta.glob<ImageMetadata>(
+  '../assets/certificates/*.{png,jpg,jpeg,webp}',
+  { eager: true, import: 'default' },
+);
+const pdfs = import.meta.glob<string>('../assets/certificates/*.pdf', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
+
+const entries: Certificate[] = [
   {
     id: 'net-10',
     title: 'Arquitectura de Aplicaciones Empresariales con .NET 10',
@@ -72,3 +83,24 @@ export const certificates: Certificate[] = [
     featured: true,
   },
 ];
+
+// El nombre del archivo debe coincidir con el id del certificado.
+export const certificates: Certificate[] = entries.map((certificate) => {
+  const basePath = `../assets/certificates/${certificate.id}`;
+  const image = ['png', 'jpg', 'jpeg', 'webp']
+    .map((extension) => images[`${basePath}.${extension}`])
+    .find(Boolean);
+
+  return {
+    ...certificate,
+    image: image
+      ? {
+          src: image,
+          width: image.width,
+          height: image.height,
+          alt: `Certificado de ${certificate.title}, emitido por ${certificate.issuer}`,
+        }
+      : certificate.image,
+    pdfUrl: pdfs[`${basePath}.pdf`] ?? certificate.pdfUrl,
+  };
+});

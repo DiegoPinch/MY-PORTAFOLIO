@@ -1,10 +1,10 @@
 import type { SectionHeading } from '../types/content';
 export const headings = {
   about: {
-    eyebrow: '01 // Enfoque y filosofía de ingeniería',
-    title: 'Arquitectura por capas, código limpio y soluciones diseñadas para escalar.',
+    eyebrow: '01 // Cómo puedo ayudar',
+    title: 'Desarrollo sistemas que ordenan el trabajo y facilitan las decisiones.',
     description:
-      'Construyo sistemas con separación estricta de responsabilidades, alta mantenibilidad y contratos de API consistentes, asegurando que cada componente aporte valor de negocio sin complejidad innecesaria.',
+      'Combino análisis de procesos, desarrollo backend y diseño de interfaces para entregar herramientas que un equipo pueda usar, mantener y ampliar.',
   },
   experience: {
     eyebrow: '02 // Experiencia laboral & formación',
@@ -14,14 +14,14 @@ export const headings = {
   },
   projects: {
     eyebrow: '03 // Proyectos destacados',
-    title: 'Sistemas Empresariales & Software en Producción',
+    title: 'Proyectos seleccionados',
     description:
-      'Plataformas desarrolladas con arquitecturas desacopladas, APIs REST y bases de datos robustas.',
+      'Una selección de mi trabajo en desarrollo web y sistemas de gestión.',
   },
   stack: {
-    eyebrow: '04 // Matriz tecnológica',
-    title: 'Capacidades Técnicas & Herramientas',
-    description: 'Herramientas y lenguajes utilizados en proyectos académicos y empresariales.',
+    eyebrow: '04 // Competencias técnicas',
+    title: 'Lo que puedo aportar a tu equipo',
+    description: 'Desarrollo con .NET, Angular y bases de datos relacionales, con experiencia en sistemas de gestión e integración de servicios.',
   },
   certificates: {
     eyebrow: '05 // Certificaciones & formación continua',
@@ -33,7 +33,7 @@ export const headings = {
     title: 'Perfil Trilingüe y Comunicación Técnica',
   },
   contact: {
-    eyebrow: '07 // Contacto directo',
+    eyebrow: '06 // Contacto directo',
     title: 'Iniciemos una conversación profesional',
     description:
       'Disponible para integrarme a equipos de desarrollo de software, proyectos empresariales .NET/Angular, consultoría o nuevos retos profesionales.',
@@ -45,8 +45,8 @@ export const headings = {
 export const philosophyQuote =
   'El software de calidad se logra aplicando disciplina en los límites de dominio y claridad en cada abstracción.';
 export const contactTopics = [
-  'Oportunidad laboral / contratación',
-  'Desarrollo de proyecto web / ERP',
-  'Desarrollo .NET Core / Angular / APIs',
-  'Otro asunto profesional',
+  { label: 'Oportunidad laboral', value: 'Oportunidad laboral / contratación' },
+  { label: 'Proyecto web / ERP', value: 'Desarrollo de proyecto web / ERP' },
+  { label: '.NET / Angular / APIs', value: 'Desarrollo .NET Core / Angular / APIs' },
+  { label: 'Otro asunto', value: 'Otro asunto profesional' },
 ];

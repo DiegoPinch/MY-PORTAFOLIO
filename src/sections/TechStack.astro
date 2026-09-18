@@ -7,7 +7,7 @@ import TechStackCard from '../components/TechStackCard.astro';
 
 <section id="stack" aria-labelledby="stack-title" class="section">
   <SectionHeader heading={headings.stack} id="stack-title" />
-  <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+  <div class="grid gap-5 md:grid-cols-2">
     {techStack.map((category) => (
       <TechStackCard category={category} />
     ))}

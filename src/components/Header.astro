@@ -1,40 +1,42 @@
 ---
 import { navigation, profile } from '../data/profile';
 import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import profilePhoto from '../assets/profile/diego-pincha.png';
 ---
 
 <header class="sticky top-0 z-40 border-b border-line bg-canvas/90 backdrop-blur-xl">
   <div class="page-container flex min-h-18 items-center justify-between gap-3">
     <a
       href="#inicio"
-      class="flex shrink-0 items-center gap-3"
+      class="flex min-w-0 items-center gap-3 py-2"
       aria-label={`${profile.shortName}, inicio`}
     >
-      <span class="flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-card font-mono text-xs font-bold text-accent">
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-accent/35 bg-card sm:hidden">
+        <Image src={profilePhoto} alt="" width={80} height={80} format="webp" class="h-full w-full object-cover" />
+      </span>
+      <span class="hidden h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-line bg-card font-mono text-sm font-bold text-accent sm:flex">
         {profile.initials}
       </span>
       <span class="flex flex-col gap-1">
-        <span class="text-sm font-semibold tracking-tight text-heading">{profile.shortName}</span>
-        <span class="font-mono text-[9px] uppercase tracking-wider text-muted sm:text-[10px]">
-          {profile.role}
-        </span>
+        <span class="text-base font-semibold tracking-tight text-heading">{profile.shortName}</span>
       </span>
     </a>
-    <nav aria-label="Navegación principal" class="hidden items-center gap-5 xl:flex">
+    <nav aria-label="Navegación principal" class="hidden shrink-0 items-center gap-4 xl:flex">
       {navigation.map((item) => (
         <a
           href={item.href}
           data-nav-link
-          class="py-4 text-sm font-medium text-body transition-colors hover:text-accent aria-[current=location]:text-accent"
+          class="py-4 text-base font-medium text-body transition-colors hover:text-accent aria-[current=location]:text-accent"
         >
           {item.label}
         </a>
       ))}
     </nav>
-    <div class="flex items-center gap-2">
+    <div class="flex shrink-0 items-center gap-2">
       <a
         href={profile.cvRequest}
-        class="hidden min-h-11 items-center gap-2 rounded-md border border-line bg-card px-3 text-xs font-medium text-heading hover:border-accent/50 md:inline-flex"
+        class="hidden min-h-11 items-center gap-2 rounded-md border border-line bg-card px-3 text-sm font-medium text-heading hover:border-accent/50 md:inline-flex"
       >
         <Icon name="download" size={14} />
         Solicitar CV
@@ -65,29 +67,31 @@ import Icon from './Icon.astro';
     class="mobile-menu fixed inset-0 z-50 flex min-h-dvh flex-col bg-canvas px-5 pb-8 pt-5 xl:hidden sm:px-8"
     hidden
   >
-    <div class="flex items-center justify-between border-b border-line pb-5">
-      <a href="#inicio" class="flex items-center gap-3" data-mobile-close>
-        <span class="flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-card font-mono text-xs font-bold text-accent">{profile.initials}</span>
-        <span class="flex flex-col gap-1"><span class="text-sm font-semibold text-heading">{profile.shortName}</span><span class="font-mono text-[9px] uppercase tracking-wider text-muted">{profile.role}</span></span>
+    <div class="flex shrink-0 items-center justify-between gap-3 border-b border-line pb-5">
+      <a href="#inicio" class="flex min-w-0 items-center gap-3" data-mobile-close>
+        <span class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-accent/35 bg-card">
+          <Image src={profilePhoto} alt="" width={80} height={80} format="webp" class="h-full w-full object-cover" />
+        </span>
+        <span class="flex min-w-0 flex-col gap-1">
+          <span class="text-base font-semibold text-heading">{profile.shortName}</span>
+        </span>
       </a>
-      <button type="button" data-menu-close class="icon-button" aria-label="Cerrar menú"><Icon name="close" size={21} /></button>
+      <button type="button" data-menu-close class="icon-button" aria-label="Cerrar menú">
+        <Icon name="close" size={21} />
+      </button>
     </div>
-    <div class="flex flex-1 flex-col justify-center gap-3 py-8">
+    <div class="flex flex-1 shrink-0 flex-col justify-center gap-3 py-6">
       {navigation.map((item) => (
         <a href={item.href} class="mobile-menu-link" data-mobile-close>
           {item.label}
         </a>
       ))}
     </div>
-    <a
-      href={profile.cvRequest}
-      data-mobile-close
-      class="mobile-menu-cta"
-    >
+    <a href={profile.cvRequest} data-mobile-close class="mobile-menu-cta shrink-0">
       <Icon name="download" size={16} />
       Solicitar CV
     </a>
-</nav>
+  </nav>
 </header>
 <noscript>
   <nav
@@ -95,7 +99,7 @@ import Icon from './Icon.astro';
     class="page-container flex flex-wrap gap-4 py-4 xl:hidden"
   >
     {navigation.map((item) => (
-      <a href={item.href} class="text-xs text-accent">
+      <a href={item.href} class="text-base text-accent">
         {item.label}
       </a>
     ))}

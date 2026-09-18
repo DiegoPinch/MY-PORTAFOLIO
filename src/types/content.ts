@@ -12,8 +12,6 @@ export type IconName =
   | 'mail'
   | 'phone'
   | 'map-pin'
-  | 'github'
-  | 'linkedin'
   | 'download'
   | 'message'
   | 'sun'
@@ -63,20 +61,24 @@ export interface Project {
   category: string;
   context: string;
   description: string;
+  summary?: string;
   tone: Tone;
   tags: string[];
   featured?: boolean;
   image?: MediaAsset;
   repository?: string;
+  privateCode?: boolean;
+  url?: string;
   facts?: { label: string; value: string }[];
   layers?: { label: string; detail: string }[];
   process?: { label: string; value: string; stack: string; detail: string };
 }
 export interface TechCategory {
   title: string;
-  eyebrow: string;
-  skills: { name: string; level: string }[];
-  note: string;
+  icon: IconName;
+  description: string;
+  skills: string[];
+  evidence: { label: string; projectId: string };
 }
 export interface Certificate {
   id: string;
@@ -87,6 +89,7 @@ export interface Certificate {
   icon: IconName;
   tone: Tone;
   image?: MediaAsset;
+  pdfUrl?: string;
   verificationUrl?: string;
   featured?: boolean;
 }

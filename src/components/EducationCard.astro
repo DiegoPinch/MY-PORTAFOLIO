@@ -9,14 +9,14 @@ import Icon from './Icon.astro';
   <div>
     <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
       <Badge tone="indigo">Formación superior</Badge>
-      <span class="font-mono text-xs text-muted">{education.period}</span>
+      <span class="font-mono text-sm text-muted">{education.period}</span>
     </div>
     <h3 class="text-xl font-bold leading-snug text-heading">{education.university}</h3>
-    <p class="my-4 font-mono text-sm text-accent">{education.degree}</p>
-    <p class="text-sm leading-relaxed">{education.description}</p>
+    <p class="my-4 font-mono text-base text-accent">{education.degree}</p>
+    <p class="text-base leading-relaxed">{education.description}</p>
     <ul class="mt-6 space-y-4 border-t border-line pt-5">
       {education.highlights.map((item, index) => (
-        <li class="flex items-start gap-3 font-mono text-xs leading-relaxed">
+        <li class="flex items-start gap-3 font-mono text-sm leading-relaxed">
           <Icon
             name={index === 0 ? 'graduation' : index === 1 ? 'code' : 'award'}
             class="mt-0.5 text-accent"
@@ -27,7 +27,7 @@ import Icon from './Icon.astro';
       ))}
     </ul>
   </div>
-  <div class="mt-8 flex flex-wrap justify-between gap-3 border-t border-line pt-5 font-mono text-[10px]">
+  <div class="mt-8 flex flex-wrap justify-between gap-3 border-t border-line pt-5 font-mono text-sm">
     <span class="text-muted">{education.location}</span>
     <span class="text-heading">{education.faculty}</span>
   </div>

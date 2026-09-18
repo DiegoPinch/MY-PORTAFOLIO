@@ -11,10 +11,10 @@ const { layers } = Astro.props;
   aria-label="Arquitectura de la solución"
   class="flex h-full flex-col justify-between bg-inset p-6 sm:p-8"
 >
-  <p class="border-b border-line pb-4 font-mono text-[10px] uppercase tracking-wide text-muted">
+  <p class="border-b border-line pb-4 font-mono text-sm uppercase tracking-wide text-muted">
     Arquitectura de la solución <span class="mt-2 block text-emerald">● Titulación UTA</span>
   </p>
-  <ol class="py-6 font-mono text-[11px]">
+  <ol class="py-6 font-mono text-sm">
     {layers.map((layer, i) => (
       <li>
         <div class="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-card p-3.5">
@@ -22,7 +22,7 @@ const { layers } = Astro.props;
             <span class="mr-1 text-muted">0{i + 1}.</span>
             {layer.label}
           </span>
-          <span class="text-[9px] text-accent">{layer.detail}</span>
+          <span class="text-sm text-accent">{layer.detail}</span>
         </div>
         {i < layers.length - 1 && (
           <div class="flex justify-center py-2 text-muted">
@@ -32,7 +32,7 @@ const { layers } = Astro.props;
       </li>
     ))}
   </ol>
-  <p class="rounded border border-line bg-card p-3 font-mono text-[10px] leading-relaxed text-muted">
+  <p class="rounded border border-line bg-card p-3 font-mono text-sm leading-relaxed text-muted">
     Estudiantes · Tutores · Evidencias
     <br />
     <span class="text-body">Reportes PDF / Excel</span>

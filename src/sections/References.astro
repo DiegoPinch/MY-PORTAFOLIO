@@ -13,7 +13,7 @@ import ResponsiveImage from '../components/ResponsiveImage.astro';
       {references.map((reference) => (
         <Card class="p-6">
           <blockquote>
-            <p class="text-sm leading-relaxed">«{reference.quote}»</p>
+            <p class="text-base leading-relaxed">«{reference.quote}»</p>
             <footer class="mt-5 flex items-center gap-4">
               {reference.avatar && (
                 <div class="w-14 shrink-0">
@@ -21,8 +21,8 @@ import ResponsiveImage from '../components/ResponsiveImage.astro';
                 </div>
               )}
               <div>
-                <p class="text-sm font-semibold text-heading">{reference.name}</p>
-                <p class="mt-1 text-xs text-muted">{reference.role}</p>
+                <p class="text-base font-semibold text-heading">{reference.name}</p>
+                <p class="mt-1 text-sm text-muted">{reference.role}</p>
               </div>
             </footer>
           </blockquote>

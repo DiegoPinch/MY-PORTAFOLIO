@@ -19,7 +19,7 @@ test('desktop themes, keyboard dialogs and WCAG AA checks', async ({ page }) => 
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Diego Fernando Pincha Lema');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Diego Fernando Pincha');
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.screenshot({ path: 'test-results/desktop-dark.png', fullPage: true });
   const dark = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
