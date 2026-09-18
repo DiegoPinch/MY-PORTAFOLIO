@@ -1,0 +1,15 @@
+---
+import { languages } from '../data/skills';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import LanguageCard from '../components/LanguageCard.astro';
+---
+
+<section id="idiomas" aria-labelledby="languages-title" class="section">
+  <SectionHeader heading={headings.languages} id="languages-title" />
+  <div class="grid gap-5 md:grid-cols-3">
+    {languages.map((language) => (
+      <LanguageCard language={language} />
+    ))}
+  </div>
+</section>

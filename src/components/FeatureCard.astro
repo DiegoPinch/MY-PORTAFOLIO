@@ -1,0 +1,23 @@
+---
+import Card from './Card.astro';
+import Icon from './Icon.astro';
+import { toneClasses } from '../utils/styles';
+import type { Feature } from '../types/content';
+interface Props {
+  feature: Feature;
+}
+const { feature } = Astro.props;
+---
+
+<Card class="p-6 sm:p-7">
+  <span
+    class:list={[
+      'mb-5 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line bg-subtle/50',
+      toneClasses[feature.tone],
+    ]}
+  >
+    <Icon name={feature.icon} size={21} />
+  </span>
+  <h3 class="mb-3 text-base font-semibold text-heading">{feature.title}</h3>
+  <p class="text-sm leading-relaxed">{feature.description}</p>
+</Card>

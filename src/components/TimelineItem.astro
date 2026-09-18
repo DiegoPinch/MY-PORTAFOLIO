@@ -1,0 +1,31 @@
+---
+import type { Experience } from '../types/content';
+import { toneClasses } from '../utils/styles';
+import Card from './Card.astro';
+import Badge from './Badge.astro';
+interface Props {
+  entry: Experience;
+}
+const { entry } = Astro.props;
+---
+
+<li>
+  <Card class="h-full p-6">
+    <div class="mb-3 flex flex-wrap items-center justify-between gap-3">
+      <Badge tone={entry.tone}>{entry.category}</Badge>
+      <span class="font-mono text-[10px] text-muted">{entry.period}</span>
+    </div>
+    <h3 class="text-lg font-bold leading-snug text-heading">{entry.title}</h3>
+    <p class:list={['mb-4 mt-2 font-mono text-xs', toneClasses[entry.tone]]}>
+      {entry.organization}
+    </p>
+    <p class="text-sm leading-relaxed">{entry.description}</p>
+    <ul aria-label="Tecnologías y habilidades" class="mt-4 flex flex-wrap gap-1.5">
+      {entry.tags.map((tag) => (
+        <li>
+          <Badge>{tag}</Badge>
+        </li>
+      ))}
+    </ul>
+  </Card>
+</li>

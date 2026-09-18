@@ -1,0 +1,33 @@
+---
+import { references } from '../data/personal';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import Card from '../components/Card.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
+---
+
+{references.length > 0 && (
+  <section id="referencias" aria-labelledby="references-title" class="section">
+    <SectionHeader heading={headings.references} id="references-title" />
+    <div class="grid gap-5 md:grid-cols-2">
+      {references.map((reference) => (
+        <Card class="p-6">
+          <blockquote>
+            <p class="text-sm leading-relaxed">«{reference.quote}»</p>
+            <footer class="mt-5 flex items-center gap-4">
+              {reference.avatar && (
+                <div class="w-14 shrink-0">
+                  <ResponsiveImage image={reference.avatar} fallback={reference.name} />
+                </div>
+              )}
+              <div>
+                <p class="text-sm font-semibold text-heading">{reference.name}</p>
+                <p class="mt-1 text-xs text-muted">{reference.role}</p>
+              </div>
+            </footer>
+          </blockquote>
+        </Card>
+      ))}
+    </div>
+  </section>
+)}

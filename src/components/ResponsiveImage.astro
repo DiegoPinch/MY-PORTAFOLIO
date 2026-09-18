@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import type { MediaAsset } from '../types/content';
+interface Props {
+  image?: MediaAsset;
+  fallback: string;
+  class?: string;
+  priority?: boolean;
+  fit?: 'cover' | 'contain';
+}
+const { image, fallback, class: className, priority = false, fit = 'cover' } = Astro.props;
+---
+
+<div
+  class:list={['media-frame rounded-lg', className]}
+  style={`aspect-ratio: ${image ? `${image.width} / ${image.height}` : '16 / 9'}`}
+  data-fit={fit}
+>
+  <div
+    class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-5 text-center"
+    aria-hidden={image ? 'true' : undefined}
+  >
+    <Icon name="image" size={28} class="text-muted" />
+    <span class="text-xs leading-relaxed text-body">{fallback}</span>
+  </div>
+  {image &&
+    (typeof image.src === 'string' ? (
+      <img
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        fetchpriority={priority ? 'high' : 'auto'}
+        data-managed-image
+      />
+    ) : (
+      <Image
+        src={image.src}
+        alt={image.alt}
+        widths={[320, 640, 960]}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        format="webp"
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        data-managed-image
+      />
+    ))}
+</div>

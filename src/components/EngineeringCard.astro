@@ -1,0 +1,26 @@
+---
+import { profile } from '../data/profile';
+---
+
+<aside
+  aria-label="Fotografía de perfil"
+  class="mx-auto w-full max-w-[420px] rounded-2xl border border-line bg-gradient-to-b from-heading/10 to-transparent p-2 shadow-2xl shadow-black/10"
+>
+  <div class="relative flex aspect-[4/4.6] flex-col justify-between overflow-hidden rounded-xl bg-card p-5 sm:p-6">
+    <div
+      class="blueprint-grid pointer-events-none absolute inset-0 opacity-35"
+      aria-hidden="true"
+    ></div>
+    <div
+      class="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo/10 via-transparent to-canvas/60"
+      aria-hidden="true"
+    ></div>
+    <div class="relative flex h-full flex-col items-center justify-center p-8 text-center">
+      <div class="flex h-32 w-32 items-center justify-center rounded-full border border-accent/40 bg-canvas/75 font-mono text-4xl font-bold text-accent shadow-2xl shadow-accent/10 sm:h-36 sm:w-36" aria-hidden="true">{profile.initials}</div>
+      <p class="mt-7 text-lg font-semibold text-heading">{profile.cardName}</p>
+      <p class="mt-2 font-mono text-xs uppercase tracking-[0.16em] text-accent">{profile.role}</p>
+      <p class="mt-6 max-w-xs text-xs leading-relaxed text-muted">Tu fotografía profesional aparecerá aquí</p>
+      <div class="mt-7 h-px w-16 bg-accent/50" aria-hidden="true"></div>
+    </div>
+  </div>
+</aside>

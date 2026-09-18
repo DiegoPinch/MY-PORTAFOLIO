@@ -1,0 +1,19 @@
+---
+import { headings, philosophyQuote } from '../data/sections';
+import { principles } from '../data/experience';
+import SectionHeader from '../components/SectionHeader.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+---
+
+<section id="trayectoria" aria-labelledby="about-title" class="section">
+  <SectionHeader heading={headings.about} id="about-title" />
+  <div class="grid gap-5 md:grid-cols-3">
+    {principles.map((feature) => (
+      <FeatureCard feature={feature} />
+    ))}
+  </div>
+  <blockquote class="mt-7 flex flex-col justify-between gap-4 rounded-xl border border-line bg-inset p-6 sm:flex-row sm:items-center">
+    <p class="font-mono text-xs italic leading-relaxed text-body">«{philosophyQuote}»</p>
+    <footer class="shrink-0 font-mono text-[10px] text-muted">Principio de desarrollo</footer>
+  </blockquote>
+</section>

@@ -1,0 +1,18 @@
+---
+import type { SectionHeading } from '../types/content';
+interface Props {
+  heading: SectionHeading;
+  id: string;
+}
+const { heading, id } = Astro.props;
+---
+
+<div class="mb-10 max-w-3xl sm:mb-12">
+  <p class="eyebrow mb-3">{heading.eyebrow}</p>
+  <h2 id={id} class="text-2xl font-bold leading-snug tracking-tight text-heading sm:text-3xl">
+    {heading.title}
+  </h2>
+  {heading.description && (
+    <p class="mt-4 text-sm leading-relaxed text-body sm:text-base">{heading.description}</p>
+  )}
+</div>

@@ -1,0 +1,16 @@
+---
+import Card from './Card.astro';
+import { toneClasses } from '../utils/styles';
+import type { Language } from '../types/content';
+interface Props {
+  language: Language;
+}
+const { language } = Astro.props;
+---
+
+<Card class="p-6">
+  <p class="mb-4 font-mono text-[10px] uppercase text-muted">{language.label}</p>
+  <h3 class="text-lg font-bold text-heading">{language.name}</h3>
+  <p class:list={['mb-4 mt-2 font-mono text-xs', toneClasses[language.tone]]}>{language.level}</p>
+  <p class="text-xs leading-relaxed">{language.description}</p>
+</Card>

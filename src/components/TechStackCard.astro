@@ -1,0 +1,26 @@
+---
+import Card from './Card.astro';
+import type { TechCategory } from '../types/content';
+interface Props {
+  category: TechCategory;
+}
+const { category } = Astro.props;
+---
+
+<Card class="flex flex-col justify-between p-5">
+  <div>
+    <p class="mb-2 font-mono text-[10px] uppercase tracking-wide text-muted">{category.eyebrow}</p>
+    <h3 class="mb-5 text-base font-semibold text-heading">{category.title}</h3>
+    <dl class="divide-y divide-line font-mono text-[10px]">
+      {category.skills.map((skill) => (
+        <div class="flex justify-between gap-3 py-2.5">
+          <dt class="text-body">{skill.name}</dt>
+          <dd class="shrink-0 text-accent">{skill.level}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+  <p class="mt-5 border-t border-line pt-4 font-mono text-[10px] leading-relaxed text-muted">
+    {category.note}
+  </p>
+</Card>

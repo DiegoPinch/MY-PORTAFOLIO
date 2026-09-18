@@ -1,0 +1,15 @@
+---
+import { certificates } from '../data/certificates';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import CertificateCard from '../components/CertificateCard.astro';
+---
+
+<section id="certificaciones" aria-labelledby="certifications-title" class="section">
+  <SectionHeader heading={headings.certificates} id="certifications-title" />
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {certificates.map((certificate) => (
+      <CertificateCard certificate={certificate} />
+    ))}
+  </div>
+</section>

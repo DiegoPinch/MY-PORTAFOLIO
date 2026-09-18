@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+  as?: 'article' | 'div' | 'aside';
+}
+const { class: className, as: Tag = 'article' } = Astro.props;
+---
+
+<Tag
+  class:list={[
+    'reveal min-w-0 rounded-xl border border-line bg-card transition-colors hover:border-accent/25',
+    className,
+  ]}
+>
+  <slot />
+</Tag>

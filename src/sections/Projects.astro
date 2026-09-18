@@ -1,0 +1,15 @@
+---
+import { projects } from '../data/projects';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<section id="proyectos" aria-labelledby="projects-title" class="section">
+  <SectionHeader heading={headings.projects} id="projects-title" />
+  <div class="grid gap-6 md:grid-cols-2">
+    {projects.map((project) => (
+      <ProjectCard project={project} />
+    ))}
+  </div>
+</section>

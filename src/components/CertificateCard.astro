@@ -1,0 +1,82 @@
+---
+import type { Certificate } from '../types/content';
+import { toneClasses } from '../utils/styles';
+import Icon from './Icon.astro';
+import Modal from './Modal.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
+import Button from './Button.astro';
+interface Props {
+  certificate: Certificate;
+}
+const { certificate: cert } = Astro.props;
+---
+
+<article
+  class:list={[
+    'group overflow-hidden rounded-xl border border-line bg-card transition-colors hover:border-accent/30',
+    cert.featured && 'sm:col-span-2 lg:col-span-3',
+  ]}
+>
+  <div class:list={['h-full', cert.featured && 'grid md:grid-cols-12']}>
+    <div
+      class:list={[
+        'border-b border-line bg-inset p-4',
+        cert.featured && 'md:col-span-5 md:border-b-0 md:border-r',
+      ]}
+    >
+      <div class="mb-3 flex justify-between gap-3 font-mono text-[10px] uppercase">
+        <span class:list={['font-semibold', toneClasses[cert.tone]]}>{cert.issuer}</span>
+        {cert.year && <span class="text-muted">{cert.year}</span>}
+      </div>
+      {cert.image ? (
+        <ResponsiveImage image={cert.image} fallback={cert.title} fit="contain" />
+      ) : (
+        <div class="flex aspect-video flex-col items-center justify-center gap-3 rounded-lg border border-line bg-subtle/60 p-5 text-center">
+          <Icon name={cert.icon} size={30} class={toneClasses[cert.tone]} />
+          <p class="max-w-xs text-xs font-semibold leading-relaxed text-heading">{cert.title}</p>
+          <span class="font-mono text-[9px] text-muted">{cert.issuer}</span>
+        </div>
+      )}
+    </div>
+    <div
+      class:list={['flex flex-col justify-between p-5', cert.featured && 'md:col-span-7 md:p-7']}
+    >
+      <div>
+        <h3 class="mb-3 text-sm font-semibold leading-relaxed text-heading">{cert.title}</h3>
+        <p class="text-xs leading-relaxed">{cert.description}</p>
+      </div>
+      <div class="mt-5 flex items-center justify-between gap-3 border-t border-line pt-3">
+        <span class="font-mono text-[10px] text-muted">{cert.year ?? 'Formación lingüística'}</span>
+        <button
+          type="button"
+          data-open-dialog={`certificate-${cert.id}`}
+          aria-haspopup="dialog"
+          class="inline-flex min-h-11 items-center gap-2 font-mono text-xs text-accent hover:text-heading"
+        >
+          {cert.image ? 'Ver certificado' : 'Ver detalles'}
+          <Icon name="arrow-up-right" size={14} />
+        </button>
+      </div>
+    </div>
+  </div>
+</article>
+<Modal id={`certificate-${cert.id}`} title={cert.title}>
+  <p class="mb-5 font-mono text-xs text-accent">
+    {cert.issuer}
+    {cert.year && ` · ${cert.year}`}
+  </p>
+  {cert.image && (
+    <ResponsiveImage image={cert.image} fallback="No se pudo cargar el certificado" fit="contain" />
+  )}
+  <p class="my-5 text-sm leading-relaxed">{cert.description}</p>
+  {!cert.image && (
+    <p class="rounded-lg border border-line bg-inset p-4 text-xs leading-relaxed text-muted">
+      El documento digital todavía no está disponible en este portafolio.
+    </p>
+  )}
+  {cert.verificationUrl && (
+    <Button href={cert.verificationUrl} external variant="secondary" icon="arrow-up-right">
+      Verificar credencial
+    </Button>
+  )}
+</Modal>

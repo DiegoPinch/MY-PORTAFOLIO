@@ -1,0 +1,204 @@
+@import '@fontsource-variable/plus-jakarta-sans';
+@import '@fontsource-variable/jetbrains-mono';
+@import 'tailwindcss';
+@source '../';
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans Variable', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', monospace;
+  --color-canvas: var(--canvas);
+  --color-card: var(--card);
+  --color-inset: var(--inset);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-indigo: var(--indigo);
+  --color-emerald: var(--emerald);
+}
+
+:root {
+  color-scheme: dark;
+  --canvas: #0a0b10;
+  --card: #11131a;
+  --inset: #0c0e14;
+  --subtle: #191d2a;
+  --line: #ffffff14;
+  --heading: #f8fafc;
+  --body: #a3aec1;
+  --muted: #8796ad;
+  --accent: #38bdf8;
+  --indigo: #a5a7ff;
+  --emerald: #34d399;
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+  --canvas: #f6f8fc;
+  --card: #ffffff;
+  --inset: #eef2f8;
+  --subtle: #e7edf6;
+  --line: #18243b26;
+  --heading: #172033;
+  --body: #45536a;
+  --muted: #526178;
+  --accent: #03658f;
+  --indigo: #5141ba;
+  --emerald: #047857;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--canvas);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: #6366f14d;
+    color: var(--heading);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  a {
+    touch-action: manipulation;
+  }
+  button:not(:disabled),
+  select {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  dialog {
+    color: var(--body);
+  }
+  dialog::backdrop {
+    background: #050710cc;
+    backdrop-filter: blur(6px);
+  }
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+  * { scrollbar-width: thin; scrollbar-color: var(--accent) var(--inset); }
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-track { background: var(--inset); border-left: 1px solid var(--line); }
+  ::-webkit-scrollbar-thumb { min-height: 48px; border: 3px solid var(--inset); border-radius: 999px; background: linear-gradient(180deg, var(--accent), var(--indigo)); }
+  ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--indigo), var(--accent)); }
+}
+@layer components {
+  .page-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .section {
+    @apply border-b border-line py-16 sm:py-20;
+  }
+  .eyebrow {
+    @apply font-mono text-[11px] font-medium uppercase tracking-wider text-accent;
+  }
+  .field {
+    @apply w-full rounded-lg border border-line bg-canvas px-3.5 py-3 text-sm text-heading placeholder:text-muted focus:border-accent;
+  }
+  .field-label {
+    @apply mb-2 block font-mono text-[11px] uppercase tracking-wide text-body;
+  }
+  .icon-button {
+    @apply inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-line bg-card text-body transition-colors hover:border-accent/50 hover:text-accent;
+  }
+}
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.mobile-menu { animation: menu-in .28s cubic-bezier(.2,.75,.25,1) both; }
+.mobile-menu-link { @apply flex min-h-16 items-center justify-center rounded-xl border border-line bg-card px-5 text-center font-mono text-base font-semibold uppercase tracking-[0.16em] text-heading transition-all hover:border-accent/50 hover:bg-subtle hover:text-accent; }
+.mobile-menu-cta { @apply flex min-h-16 items-center justify-center gap-2 rounded-xl border border-accent/30 bg-accent px-5 text-center font-mono text-base font-semibold uppercase tracking-[0.13em] text-canvas transition-opacity hover:opacity-85; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+.atmosphere {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.atmosphere::before,
+.atmosphere::after {
+  content: '';
+  position: absolute;
+  width: min(42rem, 70vw);
+  height: min(42rem, 70vw);
+  border-radius: 999px;
+  filter: blur(90px);
+  opacity: .13;
+  animation: drift 18s ease-in-out infinite alternate;
+}
+.atmosphere::before { top: -18rem; left: -12rem; background: var(--indigo); }
+.atmosphere::after { right: -18rem; top: 24rem; background: var(--accent); animation-delay: -7s; }
+.js .reveal { opacity: 0; transform: translateY(22px); }
+.js .reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1), border-color .25s ease; }
+.js .reveal:nth-child(2) { transition-delay: 80ms; }
+.js .reveal:nth-child(3) { transition-delay: 160ms; }
+.js .reveal:nth-child(4) { transition-delay: 240ms; }
+.glow-link { position: relative; overflow: hidden; }
+.glow-link::after { content: ''; position: absolute; inset: 0; transform: translateX(-120%); background: linear-gradient(105deg, transparent 30%, #ffffff5c 50%, transparent 70%); transition: transform .65s ease; }
+.glow-link:hover::after { transform: translateX(120%); }
+@keyframes drift { from { transform: translate3d(-2%, 0, 0) scale(1); } to { transform: translate3d(3%, 5%, 0) scale(1.08); } }
+.media-frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--subtle);
+}
+.media-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.media-frame[data-fit='contain'] img {
+  object-fit: contain;
+}
+.media-frame[data-failed] img {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js .reveal,
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  .atmosphere::before, .atmosphere::after { animation: none; }
+}

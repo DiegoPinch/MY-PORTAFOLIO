@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diego Fernando Pincha Lema — Ingeniero de Software</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#0a0b10",
+            elevated: "#11131a",
+            surface: {
+              card: "#12141e",
+              subtle: "#161926",
+              border: "rgba(255, 255, 255, 0.08)",
+              borderLight: "rgba(255, 255, 255, 0.14)"
+            },
+            accent: {
+              indigo: "#6366f1",
+              sky: "#38bdf8",
+              emerald: "#10b981",
+              muted: "#475569"
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #0a0b10;
+      color: #94a3b8;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection {
+      background: rgba(99, 102, 241, 0.3);
+      color: #f8fafc;
+    }
+    .grid-lines {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+    .cert-frame {
+      background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+<body class="bg-[#0a0b10] text-[#94a3b8] font-sans antialiased min-h-screen relative overflow-x-hidden">
+<!-- Subtle Top Atmospheric Gradient -->
+<div class="fixed top-0 inset-x-0 h-96 bg-gradient-to-b from-indigo-950/15 via-transparent to-transparent pointer-events-none -z-10"></div>
+<!-- NAVIGATION HEADER -->
+<header class="sticky top-0 z-50 w-full border-b border-white/[0.07] bg-[#0a0b10]/80 backdrop-blur-md transition-all">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Brand / Identity -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-8 h-8 rounded-lg border border-white/10 bg-[#12141e] flex items-center justify-center font-mono font-bold text-xs text-[#38bdf8] group-hover:border-[#38bdf8]/40 transition-colors">
+DP
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold tracking-tight text-[#f8fafc] group-hover:text-white transition-colors">Diego Pincha</span>
+<span class="text-[11px] font-mono tracking-wide text-[#64748b] uppercase">INGENIERO DE SOFTWARE</span>
+</div>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8 text-[13px] font-medium tracking-normal text-[#94a3b8]">
+<a class="hover:text-[#f8fafc] transition-colors" href="#trayectoria">Trayectoria</a>
+<a class="hover:text-[#f8fafc] transition-colors" href="#experiencia">Experiencia</a>
+<a class="hover:text-[#f8fafc] transition-colors" href="#stack">Stack</a>
+<a class="hover:text-[#f8fafc] transition-colors" href="#proyectos">Proyectos</a>
+<a class="hover:text-[#f8fafc] transition-colors" href="#certificaciones">Certificaciones</a>
+<a class="hover:text-[#f8fafc] transition-colors" href="#contacto">Contacto</a>
+</nav>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-2 pr-3 border-r border-white/[0.08]">
+<a aria-label="GitHub" class="text-[#64748b] hover:text-[#f8fafc] transition-colors p-1.5 rounded" href="https://github.com/DiegoPinch" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="text-[#64748b] hover:text-[#f8fafc] transition-colors p-1.5 rounded" href="https://www.linkedin.com/in/diego-fernando-pincha-lema-b41a54215/" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<a class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs font-medium text-[#f8fafc] bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.1] transition-all" href="mailto:pinchadiego8@gmail.com?subject=Solicitud%20de%20CV%20-%20Diego%20Pincha">
+<span class="material-symbols-outlined text-[15px] text-[#94a3b8]">download</span>
+<span>Descargar CV</span>
+</a>
+<!-- Profile Indicator -->
+<div class="relative w-7 h-7 rounded-full overflow-hidden ring-1 ring-white/20 bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-[11px] font-bold text-white">
+DP
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN WRAPPER -->
+<main class="max-w-7xl mx-auto px-6 lg:px-8 pt-12 lg:pt-20 pb-28">
+<!-- HERO SECTION -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center pb-20 border-b border-white/[0.08]">
+<!-- Left Hero Column: Value Proposition & Profile Statement -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#11131a] border border-white/[0.09] mb-8 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-xs font-mono text-[#cbd5e1] tracking-tight">Disponible para proyectos &amp; nuevos retos profesionales</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-[52px] leading-[1.12] font-extrabold tracking-tight text-[#f8fafc] mb-4">
+Diego Fernando Pincha Lema
+</h1>
+<div class="text-lg sm:text-xl font-medium text-[#38bdf8] mb-4">
+Ingeniero de Software — .NET Core, Angular, Blazor &amp; Soluciones Empresariales
+</div>
+<!-- Quick contact info line -->
+<div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-mono text-[#64748b] mb-6">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-[#38bdf8]">location_on</span> Latacunga, Ecuador</span>
+<span class="text-white/20">•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-emerald-400">call</span> +593 991586128</span>
+<span class="text-white/20">•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-indigo-400">mail</span> pinchadiego8@gmail.com</span>
+</div>
+<p class="text-base sm:text-lg leading-relaxed text-[#94a3b8] max-w-2xl mb-8 font-normal">
+Ingeniero de Software orientado al análisis, diseño y desarrollo de soluciones tecnológicas robustas para la automatización y mejora de procesos. Especializado en APIs REST, arquitectura por capas (Clean Architecture), integración de servicios empresariales y modelado eficiente de bases de datos.
+</p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 mb-10">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#f8fafc] text-[#0a0b10] text-xs font-semibold tracking-wide uppercase hover:bg-white hover:shadow-lg hover:shadow-white/5 transition-all" href="#proyectos">
+<span>Ver Proyectos</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-[#12141e] text-[#f8fafc] text-xs font-semibold tracking-wide uppercase border border-white/[0.1] hover:border-white/20 hover:bg-[#161926] transition-all" href="#contacto">
+<span class="material-symbols-outlined text-[16px] text-[#64748b]">chat</span>
+<span>Contactar / Iniciar Conversación</span>
+</a>
+</div>
+<!-- Metric Ticker / Hairline Grid -->
+<div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-white/[0.08]">
+<div>
+<div class="text-2xl font-bold font-mono text-[#f8fafc] tracking-tight">3+ Proyectos</div>
+<div class="text-xs text-[#64748b] mt-0.5">Enterprise / ERPs</div>
+</div>
+<div>
+<div class="text-2xl font-bold font-mono text-[#38bdf8] tracking-tight">100%</div>
+<div class="text-xs text-[#64748b] mt-0.5">Clean Architecture &amp; SOLID</div>
+</div>
+<div>
+<div class="text-2xl font-bold font-mono text-[#f8fafc] tracking-tight">3 Motores</div>
+<div class="text-xs text-[#64748b] mt-0.5">SQL Server, MySQL, Postgres</div>
+</div>
+<div>
+<div class="text-2xl font-bold font-mono text-[#38bdf8] tracking-tight">Trilingüe</div>
+<div class="text-xs text-[#64748b] mt-0.5">Español, Inglés B1, Kichwa</div>
+</div>
+</div>
+</div>
+<!-- Right Hero Column: Editorial Card with Professional Persona -->
+<div class="lg:col-span-5 relative w-full flex flex-col items-center">
+<div class="relative w-full max-w-[420px] rounded-2xl p-2 bg-gradient-to-b from-white/[0.12] to-transparent border border-white/[0.08] shadow-2xl">
+<!-- Portrait Container with stylized visual architecture profile -->
+<div class="relative w-full aspect-[4/4.6] rounded-xl overflow-hidden bg-[#12141e] flex flex-col justify-between p-6">
+<div class="absolute inset-0 bg-gradient-to-br from-indigo-950/40 via-[#11131a] to-[#0a0b10] pointer-events-none"></div>
+<div class="absolute inset-0 grid-lines opacity-25 pointer-events-none"></div>
+<!-- Top Card Chip -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-white/[0.06] border border-white/[0.1] text-[11px] font-mono text-[#38bdf8]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse"></span> UTA • Graduado
+</div>
+<span class="text-xs font-mono text-[#64748b]">2020 – 2025</span>
+</div>
+<!-- Center Illustration: Software Engineering Terminal Blueprint -->
+<div class="relative z-10 my-auto p-4 rounded-xl bg-[#0a0b10]/80 border border-white/[0.08] backdrop-blur-md space-y-2.5 font-mono text-xs">
+<div class="flex items-center justify-between border-b border-white/[0.06] pb-2 text-[11px] text-[#64748b]">
+<span>ENGINEERING SPEC</span>
+<span class="text-emerald-400">STATUS: READY</span>
+</div>
+<div class="text-[#cbd5e1] flex items-center justify-between">
+<span class="text-[#64748b]">stack.backend:</span>
+<span class="text-[#38bdf8]">.NET 8/10, Node.js</span>
+</div>
+<div class="text-[#cbd5e1] flex items-center justify-between">
+<span class="text-[#64748b]">stack.frontend:</span>
+<span class="text-[#cbd5e1]">Angular, Blazor</span>
+</div>
+<div class="text-[#cbd5e1] flex items-center justify-between">
+<span class="text-[#64748b]">architecture:</span>
+<span class="text-indigo-400">Clean Architecture</span>
+</div>
+<div class="text-[#cbd5e1] flex items-center justify-between">
+<span class="text-[#64748b]">databases:</span>
+<span class="text-emerald-400">SQL Server / MySQL / PG</span>
+</div>
+</div>
+<!-- Bottom Floating Identity Strip -->
+<div class="relative z-10 p-3.5 rounded-lg bg-[#0a0b10]/90 backdrop-blur-md border border-white/[0.1] flex items-center justify-between">
+<div>
+<div class="text-xs font-semibold text-[#f8fafc]">Diego F. Pincha Lema</div>
+<div class="text-[11px] font-mono text-[#94a3b8]">Ingeniero de Software • UTA</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-white/[0.05] border border-white/[0.08]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="text-[10px] font-mono text-[#f8fafc]">Ecuador</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 01. ENFOQUE & PRINCIPIOS DE INGENIERÍA -->
+<section class="py-20 border-b border-white/[0.08]" id="trayectoria">
+<div class="max-w-3xl mb-14">
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">01 // Enfoque y Filosofía de Ingeniería</div>
+<h2 class="text-3xl font-bold tracking-tight text-[#f8fafc]">
+Arquitectura por capas, código limpio y soluciones diseñadas para escalar.
+</h2>
+<p class="text-base text-[#94a3b8] mt-4 leading-relaxed">
+Construyo sistemas con separación estricta de responsabilidades, alta mantenibilidad y contratos de API consistentes, asegurando que cada componente aporte valor de negocio sin complejidad innecesaria.
+</p>
+</div>
+<!-- Core Focus Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-7 rounded-xl bg-[#11131a] border border-white/[0.07] hover:border-white/[0.14] transition-all">
+<div class="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#38bdf8] mb-5">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<h3 class="text-base font-semibold text-[#f8fafc] mb-2">Clean Architecture &amp; SOLID</h3>
+<p class="text-sm text-[#94a3b8] leading-relaxed">
+Diseño en capas (Domain, Application, Infrastructure, Presentation) tanto en C# con .NET Core como en Node.js, facilitando la inyección de dependencias, desacoplamiento y testeo unitario sistemático.
+</p>
+</div>
+<div class="p-7 rounded-xl bg-[#11131a] border border-white/[0.07] hover:border-white/[0.14] transition-all">
+<div class="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-emerald-400 mb-5">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<h3 class="text-base font-semibold text-[#f8fafc] mb-2">Seguridad e Integración API</h3>
+<p class="text-sm text-[#94a3b8] leading-relaxed">
+Implementación de autenticación y autorización segura con JSON Web Tokens (JWT), control de acceso basado en roles (RBAC), documentación interactiva Swagger/OpenAPI y alineación con guías de seguridad OWASP.
+</p>
+</div>
+<div class="p-7 rounded-xl bg-[#11131a] border border-white/[0.07] hover:border-white/[0.14] transition-all">
+<div class="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-indigo-400 mb-5">
+<span class="material-symbols-outlined text-[20px]">deployed_code</span>
+</div>
+<h3 class="text-base font-semibold text-[#f8fafc] mb-2">Contenedores &amp; DevOps</h3>
+<p class="text-sm text-[#94a3b8] leading-relaxed">
+Contenerización de aplicaciones con Docker y Docker Compose para reproducibilidad de entornos de desarrollo y producción, control de versiones semántico con Git/GitHub y flujos ágiles de entrega continua.
+</p>
+</div>
+</div>
+<!-- Technical Quote Callout -->
+<div class="mt-8 p-6 rounded-xl bg-[#0d0f17] border border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+<p class="text-sm italic text-[#cbd5e1] font-mono">
+«El software de calidad se logra aplicando disciplina en los límites de dominio y claridad en cada abstracción.»
+</p>
+</div>
+<span class="text-xs font-mono text-[#64748b] whitespace-nowrap">Principio de Desarrollo</span>
+</div>
+</section>
+<!-- 02. EXPERIENCIA LABORAL & FORMACIÓN -->
+<section class="py-20 border-b border-white/[0.08]" id="experiencia">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+<div>
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">02 // Experiencia Laboral &amp; Formación</div>
+<h2 class="text-3xl font-bold tracking-tight text-[#f8fafc]">Trayectoria Profesional y Académica</h2>
+<p class="text-sm text-[#94a3b8] mt-1">Historial de contribuciones técnicas en soporte, desarrollo e ingeniería de software.</p>
+</div>
+<div class="text-xs font-mono text-[#64748b]">VALIDADO // 2020 – 2026</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: Experience Timeline -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Job 1 -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.08] hover:border-white/[0.14] transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<span class="px-2 py-0.5 text-[11px] font-mono rounded bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/20">SOPORTE TÉCNICO &amp; REDES</span>
+<span class="text-xs font-mono text-[#64748b]">Oct 2024 – Ene 2026</span>
+</div>
+<h3 class="text-lg font-bold text-[#f8fafc]">Auxiliar de Soporte Técnico en Seguridad Electrónica</h3>
+<div class="text-xs font-mono text-[#38bdf8] mb-3">TechResources</div>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-4">
+Diagnóstico, mantenimiento y resolución de incidencias en redes IP, servidores, hardware y software. Elaboración de documentación técnica rigurosa y manuales de usuario para optimizar la continuidad operativa de clientes corporativos.
+</p>
+<div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#cbd5e1]">
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Redes IP</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Servidores</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Diagnóstico Hardware/Software</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Manuales Técnicos</span>
+</div>
+</div>
+<!-- Job 2 -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.08] hover:border-white/[0.14] transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<span class="px-2 py-0.5 text-[11px] font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">DESARROLLO IOT &amp; FULLSTACK</span>
+<span class="text-xs font-mono text-[#64748b]">Abr 2024 – Ago 2024</span>
+</div>
+<h3 class="text-lg font-bold text-[#f8fafc]">Pasante de Desarrollo de Software</h3>
+<div class="text-xs font-mono text-emerald-400 mb-3">Proyecto IoT &amp; Automatización</div>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-4">
+Desarrollo e integración de un sistema IoT integral para la automatización y control inteligente de iluminación. Conexión de aplicación móvil en Flutter con arquitectura backend en Node.js, Express y bases de datos relacionales MySQL.
+</p>
+<div class="flex flex-wrap gap-2 text-[11px] font-mono text-[#cbd5e1]">
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Express</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">Flutter</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">MySQL</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04]">IoT</span>
+</div>
+</div>
+</div>
+<!-- Right: Academic Credentials & Education -->
+<div class="lg:col-span-5 flex flex-col justify-between p-6 rounded-xl bg-[#11131a] border border-white/[0.08]">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-0.5 text-[11px] font-mono font-medium rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">FORMACIÓN SUPERIOR</span>
+<span class="text-xs font-mono text-[#64748b]">2020 – 2025</span>
+</div>
+<h3 class="text-xl font-bold text-[#f8fafc] mb-2">Universidad Técnica de Ambato (UTA)</h3>
+<div class="text-sm text-[#38bdf8] font-mono mb-4">Grado en Ingeniería de Software</div>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-6">
+Formación universitaria rigurosa enfocada en el ciclo completo de vida del software (SDLC), modelado matemático, arquitecturas distribuidas, ingeniería de requisitos, calidad de software y bases de datos relacionales avanzadas.
+</p>
+<div class="space-y-3 font-mono text-xs text-[#cbd5e1] border-t border-white/[0.06] pt-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-emerald-400">school</span>
+<span>Tesis aprobada: Sistema Web para Prácticas de Vinculación</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#38bdf8]">code</span>
+<span>Especialización en Desarrollo Empresarial (.NET &amp; Web)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-indigo-400">verified</span>
+<span>Grado Académico de Ingeniero de Software</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-[#64748b]">
+<span>Ambato, Ecuador</span>
+<span class="text-[#f8fafc]">Facultad de Ing. en Sistemas</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 03. CASOS DE ARQUITECTURA & PROYECTOS REALES -->
+<section class="py-20 border-b border-white/[0.08]" id="proyectos">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+<div>
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">03 // Proyectos Destacados</div>
+<h2 class="text-3xl font-bold tracking-tight text-[#f8fafc]">Sistemas Empresariales &amp; Software en Producción</h2>
+<p class="text-sm text-[#94a3b8] mt-1">Plataformas reales desarrolladas con arquitecturas desacopladas, APIs REST y bases de datos robustas.</p>
+</div>
+<div class="text-xs font-mono text-[#64748b]">AUDITORÍA: SOFTWARE REAL</div>
+</div>
+<!-- Project 1: Sistema de Titulación UTA (Featured Lead Case) -->
+<div class="rounded-2xl bg-[#11131a] border border-white/[0.08] overflow-hidden mb-8 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-white/[0.08]">
+<div class="lg:col-span-7 p-8 lg:p-10 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="px-2.5 py-0.5 text-[11px] font-mono font-medium rounded bg-[#38bdf8]/10 text-[#38bdf8] border border-[#38bdf8]/20">ACADEMIC ENTERPRISE</span>
+<span class="text-xs font-mono text-[#64748b]">Proyecto de Titulación UTA • 2024–2025</span>
+</div>
+<h3 class="text-2xl font-bold text-[#f8fafc] tracking-tight mb-3">
+Sistema de Gestión de Prácticas de Servicio Comunitario
+</h3>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-6">
+Plataforma integral orientada a la planificación, seguimiento continuo, evaluación y gestión de evidencias documentales de las prácticas de vinculación universitaria. Desarrollada bajo Clean Architecture con ASP.NET Core y frontend reactivo en Blazor.
+</p>
+<!-- Problem -> Solution -> Impact Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/[0.06] mb-6">
+<div>
+<span class="text-[11px] font-mono text-[#64748b] uppercase block">Desafío</span>
+<span class="text-xs text-[#cbd5e1] mt-1 block">Procesos manuales dispersos y falta de trazabilidad documental académica.</span>
+</div>
+<div>
+<span class="text-[11px] font-mono text-[#64748b] uppercase block">Solución</span>
+<span class="text-xs text-[#cbd5e1] mt-1 block">Clean Architecture, ASP.NET Core Web API y Blazor interactivo con roles RBAC.</span>
+</div>
+<div>
+<span class="text-[11px] font-mono text-[#38bdf8] uppercase block">Impacto</span>
+<span class="text-xs font-semibold text-[#f8fafc] mt-1 block">Control 100% digitalizado, gestión de indicadores y reportes automatizados.</span>
+</div>
+</div>
+</div>
+<!-- Tags & External Links -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/[0.06]">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">C#</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">ASP.NET Core Web API</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Blazor</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">SQL Server</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">EF Core</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">JWT</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Swagger</span>
+</div>
+<a class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-[#f8fafc] hover:text-[#38bdf8] transition-colors" href="https://github.com/DiegoPinch" rel="noopener noreferrer" target="_blank">
+<span>Ver en GitHub</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Right: Visual Architecture Diagram / Flow -->
+<div class="lg:col-span-5 p-8 lg:p-10 bg-[#0c0e14] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs font-mono text-[#64748b] pb-4 border-b border-white/[0.06]">
+<span>ARQUITECTURA DE LA SOLUCIÓN</span>
+<span class="text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> TITULACIÓN UTA
+</span>
+</div>
+<div class="space-y-3 py-6 font-mono text-xs">
+<div class="p-3 rounded-lg bg-[#11131a] border border-white/[0.06] flex items-center justify-between">
+<span class="text-[#cbd5e1]">01. Blazor WebAssembly / UI Client</span>
+<span class="text-[#38bdf8]">SPA</span>
+</div>
+<div class="flex justify-center text-[#475569]">
+<span class="material-symbols-outlined text-[16px]">south</span>
+</div>
+<div class="p-3 rounded-lg bg-[#11131a] border border-white/[0.06] flex items-center justify-between">
+<span class="text-[#cbd5e1]">02. JWT Authentication &amp; RBAC Auth</span>
+<span class="text-emerald-400">Tokens</span>
+</div>
+<div class="flex justify-center text-[#475569]">
+<span class="material-symbols-outlined text-[16px]">south</span>
+</div>
+<div class="p-3 rounded-lg bg-[#11131a] border border-white/[0.06] flex items-center justify-between">
+<span class="text-[#cbd5e1]">03. ASP.NET Core Clean Architecture API</span>
+<span class="text-[#cbd5e1]">Domain/App</span>
+</div>
+<div class="flex justify-center text-[#475569]">
+<span class="material-symbols-outlined text-[16px]">south</span>
+</div>
+<div class="p-3 rounded-lg bg-[#11131a] border border-white/[0.06] flex items-center justify-between">
+<span class="text-[#cbd5e1]">04. Entity Framework Core + SQL Server</span>
+<span class="text-[#38bdf8]">Relational DB</span>
+</div>
+</div>
+</div>
+<div class="p-3 rounded bg-white/[0.02] border border-white/[0.04] text-[11px] font-mono text-[#64748b] flex items-center justify-between">
+<span>Módulos: Estudiantes, Tutores, Evidencias</span>
+<span class="text-[#cbd5e1]">Reportes PDF / Excel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 & Project 3 Dual Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Case 2: ERP Sizadianthy -->
+<div class="rounded-2xl bg-[#11131a] border border-white/[0.08] p-8 flex flex-col justify-between hover:border-white/[0.14] transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-0.5 text-[11px] font-mono font-medium rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">ERP &amp; LOGÍSTICA</span>
+<span class="text-xs font-mono text-[#64748b]">Empresarial</span>
+</div>
+<h3 class="text-xl font-bold text-[#f8fafc] tracking-tight mb-2">ERP de Exportaciones y Contabilidad (Sizadianthy)</h3>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-6">
+Automatización integral de operaciones para la industria de exportación: control riguroso de inventarios, gestión de cadenas de producción, seguimiento logístico internacional y flujos contables centralizados en APIs desacopladas.
+</p>
+<div class="p-4 rounded-lg bg-[#0c0e14] border border-white/[0.06] font-mono text-xs space-y-2 mb-6">
+<div class="flex justify-between text-[#64748b]">
+<span>COBERTURA DE PROCESOS</span>
+<span class="text-[#f8fafc]">Inventario + Contabilidad</span>
+</div>
+<div class="w-full bg-white/[0.05] h-1.5 rounded-full overflow-hidden">
+<div class="bg-indigo-400 h-full w-[90%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-[#64748b]">
+<span>Stack: .NET Core + Angular</span>
+<span class="text-indigo-400">Contenedor: Docker</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">.NET Core</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Web API</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">SQL Server</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Angular</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Docker</span>
+</div>
+<a class="text-xs font-mono text-[#f8fafc] hover:text-[#38bdf8] transition-colors inline-flex items-center gap-1" href="https://github.com/DiegoPinch" rel="noopener noreferrer" target="_blank">
+<span>Repo</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Case 3: ERP Chaluapamba -->
+<div class="rounded-2xl bg-[#11131a] border border-white/[0.08] p-8 flex flex-col justify-between hover:border-white/[0.14] transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-0.5 text-[11px] font-mono font-medium rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">SECTOR PÚBLICO / COMUNITARIO</span>
+<span class="text-xs font-mono text-[#64748b]">Producción Real</span>
+</div>
+<h3 class="text-xl font-bold text-[#f8fafc] tracking-tight mb-2">ERP de Gestión de Servicios Públicos (Chaluapamba)</h3>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-6">
+Digitalización de procesos operativos de la Junta de Agua: registro de lecturas de consumo mensuales, facturación automatizada, módulo de recaudación de taquilla, control de mora y balances contables para rendición de cuentas comunitaria.
+</p>
+<div class="p-4 rounded-lg bg-[#0c0e14] border border-white/[0.06] font-mono text-xs space-y-2 mb-6">
+<div class="flex justify-between text-[#64748b]">
+<span>OPTIMIZACIÓN DE COBRO</span>
+<span class="text-emerald-400">Digitalización 100%</span>
+</div>
+<div class="w-full bg-white/[0.05] h-1.5 rounded-full overflow-hidden">
+<div class="bg-emerald-400 h-full w-[95%]"></div>
+</div>
+<div class="flex justify-between text-[10px] text-[#64748b]">
+<span>Backend: Node.js Express</span>
+<span class="text-[#cbd5e1]">Frontend: Angular SPA</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Express</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">MySQL</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Angular</span>
+<span class="px-2 py-0.5 rounded bg-white/[0.04] text-[11px] font-mono text-[#cbd5e1]">Docker</span>
+</div>
+<a class="text-xs font-mono text-[#f8fafc] hover:text-[#38bdf8] transition-colors inline-flex items-center gap-1" href="https://github.com/DiegoPinch" rel="noopener noreferrer" target="_blank">
+<span>Info</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 04. MATRIZ DE STACK TECNOLÓGICO -->
+<section class="py-20 border-b border-white/[0.08]" id="stack">
+<div class="max-w-3xl mb-14">
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">04 // Matriz Tecnológica</div>
+<h2 class="text-3xl font-bold tracking-tight text-[#f8fafc]">Capacidades Técnicas &amp; Herramientas</h2>
+<p class="text-sm text-[#94a3b8] mt-1">Herramientas y lenguajes dominados en proyectos académicos y empresariales.</p>
+</div>
+<!-- 4 Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Category 1 -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono text-[#64748b] tracking-wider uppercase mb-1">01 / Lógica de Negocio</div>
+<h4 class="text-base font-semibold text-[#f8fafc] mb-4">Backend &amp; APIs</h4>
+<div class="space-y-2 font-mono text-xs">
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">C#</span><span class="text-[#38bdf8]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">.NET Core / .NET 8/10</span><span class="text-[#38bdf8]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">ASP.NET Core Web API</span><span class="text-[#38bdf8]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Node.js &amp; Express</span><span class="text-[#cbd5e1]">Competente</span></div>
+<div class="flex justify-between py-1"><span class="text-[#cbd5e1]">REST APIs &amp; SOLID</span><span class="text-emerald-400">Estándar</span></div>
+</div>
+</div>
+<div class="mt-6 pt-3 border-t border-white/[0.04] text-[11px] font-mono text-[#64748b]">
+Patrones: Clean Architecture, Inyección de Dependencias, DTOs
+</div>
+</div>
+<!-- Category 2 -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono text-[#64748b] tracking-wider uppercase mb-1">02 / Interfaz de Usuario</div>
+<h4 class="text-base font-semibold text-[#f8fafc] mb-4">Frontend &amp; UI</h4>
+<div class="space-y-2 font-mono text-xs">
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Angular (SPA)</span><span class="text-[#38bdf8]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Blazor (WebAssembly)</span><span class="text-[#38bdf8]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">TypeScript &amp; JavaScript</span><span class="text-[#cbd5e1]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">HTML5 &amp; CSS3</span><span class="text-[#cbd5e1]">Avanzado</span></div>
+<div class="flex justify-between py-1"><span class="text-[#cbd5e1]">Tailwind CSS &amp; Bootstrap</span><span class="text-emerald-400">Ágil</span></div>
+</div>
+</div>
+<div class="mt-6 pt-3 border-t border-white/[0.04] text-[11px] font-mono text-[#64748b]">
+Enfoque: Componentes Modulares, Responsive Design, UX Accesible
+</div>
+</div>
+<!-- Category 3 -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono text-[#64748b] tracking-wider uppercase mb-1">03 / Persistencia &amp; Datos</div>
+<h4 class="text-base font-semibold text-[#f8fafc] mb-4">Bases de Datos</h4>
+<div class="space-y-2 font-mono text-xs">
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Microsoft SQL Server</span><span class="text-[#38bdf8]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">MySQL Relacional</span><span class="text-[#cbd5e1]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">PostgreSQL</span><span class="text-[#cbd5e1]">Competente</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Entity Framework Core</span><span class="text-[#38bdf8]">Experto</span></div>
+<div class="flex justify-between py-1"><span class="text-[#cbd5e1]">Modelado ER &amp; Queries</span><span class="text-emerald-400">Optimizado</span></div>
+</div>
+</div>
+<div class="mt-6 pt-3 border-t border-white/[0.04] text-[11px] font-mono text-[#64748b]">
+Gestión: Migraciones, Procedimientos Almacenados, Índices
+</div>
+</div>
+<!-- Category 4 -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07] flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono text-[#64748b] tracking-wider uppercase mb-1">04 / Plataforma &amp; Herramientas</div>
+<h4 class="text-base font-semibold text-[#f8fafc] mb-4">DevOps &amp; Seguridad</h4>
+<div class="space-y-2 font-mono text-xs">
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Docker &amp; Containers</span><span class="text-[#38bdf8]">Certificado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Git &amp; GitHub Flujos</span><span class="text-[#cbd5e1]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">Postman &amp; Swagger</span><span class="text-[#cbd5e1]">Avanzado</span></div>
+<div class="flex justify-between py-1 border-b border-white/[0.04]"><span class="text-[#cbd5e1]">JWT &amp; RBAC Auth</span><span class="text-emerald-400">Producción</span></div>
+<div class="flex justify-between py-1"><span class="text-[#cbd5e1]">OWASP Best Practices</span><span class="text-[#cbd5e1]">Aplicado</span></div>
+</div>
+</div>
+<div class="mt-6 pt-3 border-t border-white/[0.04] text-[11px] font-mono text-[#64748b]">
+Seguridad: Validación de Payloads, Headers seguros y Hashing
+</div>
+</div>
+</div>
+</section>
+<!-- 05. CERTIFICACIONES CON VISTA FOTOGRÁFICA / CREDENCIALES -->
+<section class="py-20 border-b border-white/[0.08]" id="certificaciones">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+<div>
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">05 // Certificaciones &amp; Validación Profesional</div>
+<h2 class="text-3xl font-bold tracking-tight text-[#f8fafc]">Credenciales Gráficas y Certificaciones Oficiales</h2>
+<p class="text-sm text-[#94a3b8] mt-1">Validación formal respaldada con visor fotográfico y verificación de entidades certificadoras.</p>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs font-mono text-[#cbd5e1]">
+<span class="material-symbols-outlined text-[15px] text-emerald-400">photo_library</span>
+<span>SOPORTE FOTO / CREDENCIAL DIGITAL</span>
+</div>
+</div>
+<!-- Modal for Certificate Photo Preview -->
+<div class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" id="cert-modal">
+<div class="relative w-full max-w-2xl bg-[#11131a] border border-white/[0.15] rounded-2xl p-6 shadow-2xl">
+<div class="flex items-center justify-between pb-4 border-b border-white/[0.08]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400">verified</span>
+<span class="font-semibold text-sm text-[#f8fafc]" id="modal-title">Certificado</span>
+</div>
+<button class="text-[#94a3b8] hover:text-white p-1" onclick="document.getElementById('cert-modal').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="py-6 flex flex-col items-center">
+<!-- Stylized Certificate Preview Document -->
+<div class="w-full aspect-[16/10] rounded-xl border border-white/[0.12] cert-frame p-8 flex flex-col justify-between relative overflow-hidden bg-[#0c0e14]">
+<div class="absolute -right-8 -bottom-8 w-40 h-40 bg-[#38bdf8]/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between text-xs font-mono text-[#64748b]">
+<span id="modal-issuer">EMISOR OFICIAL</span>
+<span class="text-emerald-400">ID / CREDENCIAL VERIFICADA</span>
+</div>
+<div class="text-center my-auto space-y-2">
+<div class="text-[11px] uppercase tracking-widest text-[#94a3b8] font-mono">Certificado de Finalización y Acreditación</div>
+<h3 class="text-xl font-bold text-white tracking-tight" id="modal-name">Nombre del Curso</h3>
+<p class="text-xs text-[#cbd5e1] font-mono">Otorgado a: <strong class="text-[#38bdf8]">Diego Fernando Pincha Lema</strong></p>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] border-t border-white/[0.08] pt-3">
+<span>Ingeniería de Software</span>
+<span id="modal-year">Año</span>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-md bg-white/[0.06] text-xs font-mono text-[#cbd5e1] hover:bg-white/[0.1]" onclick="document.getElementById('cert-modal').classList.add('hidden')">
+Cerrar Visor
+</button>
+</div>
+</div>
+</div>
+<!-- 7 Certification Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Cert 1: .NET 10 Udemy -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group">
+<div class="p-4 bg-[#0c0e14] border-b border-white/[0.06] relative cert-frame">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-2">
+<span class="text-[#38bdf8] font-semibold">UDEMY</span>
+<span>2026</span>
+</div>
+<!-- Photo Frame Representation -->
+<div class="aspect-[16/9] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden group-hover:border-[#38bdf8]/40 transition-colors">
+<span class="material-symbols-outlined text-3xl text-[#38bdf8] mb-1">workspace_premium</span>
+<div class="text-xs font-bold text-[#f8fafc] leading-tight">Arquitectura de Aplicaciones Empresariales con .NET 10</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Credencial Fotográfica Digital</div>
+<div class="absolute inset-0 bg-[#38bdf8]/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-[11px] font-mono text-[#f8fafc] bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Ver Foto
+</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-semibold text-[#f8fafc] mb-1.5">Arquitectura de Aplicaciones Empresariales con .NET 10</h4>
+<p class="text-xs text-[#94a3b8] leading-relaxed">Diseño de software empresarial desacoplado, microservicios, inyección de dependencias y patrones de diseño en el runtime moderno de Microsoft.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between">
+<span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
+</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('Arquitectura de Aplicaciones Empresariales con .NET 10', 'Udemy Certified', '2026')">
+<span>Abrir Foto</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cert 2: Docker Código Facilito -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group">
+<div class="p-4 bg-[#0c0e14] border-b border-white/[0.06] relative cert-frame">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-2">
+<span class="text-[#38bdf8] font-semibold">CÓDIGO FACILITO</span>
+<span>2026</span>
+</div>
+<div class="aspect-[16/9] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden group-hover:border-[#38bdf8]/40 transition-colors">
+<span class="material-symbols-outlined text-3xl text-emerald-400 mb-1">inventory_2</span>
+<div class="text-xs font-bold text-[#f8fafc] leading-tight">Curso Profesional de Docker</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Credencial Fotográfica Digital</div>
+<div class="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-[11px] font-mono text-[#f8fafc] bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Ver Foto
+</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-semibold text-[#f8fafc] mb-1.5">Curso Profesional de Docker</h4>
+<p class="text-xs text-[#94a3b8] leading-relaxed">Contenerización multicapa, Dockerfile optimizados, orquestación local con Docker Compose, volúmenes y redes aisladas.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between">
+<span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
+</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('Curso Profesional de Docker', 'Código Facilito', '2026')">
+<span>Abrir Foto</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cert 3: Python UNEMI -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group">
+<div class="p-4 bg-[#0c0e14] border-b border-white/[0.06] relative cert-frame">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-2">
+<span class="text-indigo-400 font-semibold">UNEMI</span>
+<span>2026</span>
+</div>
+<div class="aspect-[16/9] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden group-hover:border-indigo-400/40 transition-colors">
+<span class="material-symbols-outlined text-3xl text-indigo-400 mb-1">terminal</span>
+<div class="text-xs font-bold text-[#f8fafc] leading-tight">Python — Nivel Medio a Avanzado</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Credencial Fotográfica Digital</div>
+<div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-[11px] font-mono text-[#f8fafc] bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Ver Foto
+</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-semibold text-[#f8fafc] mb-1.5">Python — Nivel Medio a Avanzado</h4>
+<p class="text-xs text-[#94a3b8] leading-relaxed">Programación funcional, orientación a objetos avanzada, manejo robusto de excepciones y automatización de flujos de datos.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between">
+<span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
+</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('Python — Nivel Medio a Avanzado', 'UNEMI', '2026')">
+<span>Abrir Foto</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cert 4: Getting Started with Angular Edureka -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group">
+<div class="p-4 bg-[#0c0e14] border-b border-white/[0.06] relative cert-frame">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-2">
+<span class="text-[#38bdf8] font-semibold">EDUREKA</span>
+<span>2026</span>
+</div>
+<div class="aspect-[16/9] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden group-hover:border-[#38bdf8]/40 transition-colors">
+<span class="material-symbols-outlined text-3xl text-[#38bdf8] mb-1">code_blocks</span>
+<div class="text-xs font-bold text-[#f8fafc] leading-tight">Getting Started with Angular</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Credencial Fotográfica Digital</div>
+<div class="absolute inset-0 bg-[#38bdf8]/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-[11px] font-mono text-[#f8fafc] bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Ver Foto
+</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-semibold text-[#f8fafc] mb-1.5">Getting Started with Angular</h4>
+<p class="text-xs text-[#94a3b8] leading-relaxed">Fundamentos de Angular SPA, enlaces de datos bidireccionales, servicios reactivos, routing y consumo de APIs REST.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between">
+<span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
+</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('Getting Started with Angular', 'Edureka', '2026')">
+<span>Abrir Foto</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cert 5: Python Essentials 2 Cisco -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group">
+<div class="p-4 bg-[#0c0e14] border-b border-white/[0.06] relative cert-frame">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-2">
+<span class="text-emerald-400 font-semibold">CISCO / OPENEDG</span>
+<span>2024</span>
+</div>
+<div class="aspect-[16/9] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden group-hover:border-emerald-400/40 transition-colors">
+<span class="material-symbols-outlined text-3xl text-emerald-400 mb-1">verified_user</span>
+<div class="text-xs font-bold text-[#f8fafc] leading-tight">Python Essentials 2</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Credencial Fotográfica Digital</div>
+<div class="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-[11px] font-mono text-[#f8fafc] bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Ver Foto
+</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-semibold text-[#f8fafc] mb-1.5">Python Essentials 2</h4>
+<p class="text-xs text-[#94a3b8] leading-relaxed">Estructuras de datos avanzadas, generadores, iteradores y modularización bajo estándares internacionales de OpenEDG.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between">
+<span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
+</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('Python Essentials 2', 'Cisco / OpenEDG Python Institute', '2024')">
+<span>Abrir Foto</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cert 6: CCNA 1 v7 Cisco -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group">
+<div class="p-4 bg-[#0c0e14] border-b border-white/[0.06] relative cert-frame">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-2">
+<span class="text-[#38bdf8] font-semibold">CISCO NETWORKING</span>
+<span>2021</span>
+</div>
+<div class="aspect-[16/9] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden group-hover:border-[#38bdf8]/40 transition-colors">
+<span class="material-symbols-outlined text-3xl text-[#38bdf8] mb-1">lan</span>
+<div class="text-xs font-bold text-[#f8fafc] leading-tight">CCNA 1 v7: Introduction to Networks</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Credencial Fotográfica Digital</div>
+<div class="absolute inset-0 bg-[#38bdf8]/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-[11px] font-mono text-[#f8fafc] bg-black/70 px-2.5 py-1 rounded backdrop-blur-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span> Ver Foto
+</span>
+</div>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<h4 class="text-sm font-semibold text-[#f8fafc] mb-1.5">CCNA 1 v7: Introduction to Networks</h4>
+<p class="text-xs text-[#94a3b8] leading-relaxed">Modelos OSI y TCP/IP, direccionamiento IPv4/IPv6, subredes, configuración básica de routers y switches Cisco.</p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between">
+<span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
+</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('CCNA 1 v7: Introduction to Networks', 'Cisco Networking Academy', '2021')">
+<span>Abrir Foto</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cert 7: Certificación Kichwa CESLI (Col-span on large or part of grid) -->
+<div class="rounded-xl bg-[#11131a] border border-white/[0.08] overflow-hidden flex flex-col justify-between hover:border-white/[0.16] transition-all group md:col-span-2 lg:col-span-3">
+<div class="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]">
+<div class="md:col-span-5 p-5 bg-[#0c0e14] cert-frame flex flex-col justify-center">
+<div class="flex items-center justify-between text-[11px] font-mono text-[#64748b] mb-3">
+<span class="text-emerald-400 font-semibold">CESLI INSTITUTO</span>
+<span>OFICIAL</span>
+</div>
+<div class="aspect-[16/8] rounded-lg bg-[#161926] border border-white/[0.08] flex flex-col items-center justify-center p-4 text-center relative overflow-hidden">
+<span class="material-symbols-outlined text-3xl text-emerald-400 mb-1">translate</span>
+<div class="text-xs font-bold text-[#f8fafc]">Certificación Oficial — Idioma Kichwa</div>
+<div class="text-[10px] text-[#64748b] font-mono mt-1">Centro de Estudios Superior Lingüístico e Intercultural</div>
+</div>
+</div>
+<div class="md:col-span-7 p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 text-[11px] font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">VALIDACIÓN CULTURAL &amp; LINGÜÍSTICA</span>
+<span class="text-xs font-mono text-[#64748b]">CESLI</span>
+</div>
+<h4 class="text-base font-bold text-[#f8fafc] mb-2">Certificación de Suficiencia en Idioma Kichwa</h4>
+<p class="text-sm text-[#94a3b8] leading-relaxed mb-4">
+Acreditación lingüística formal emitida por el Centro de Especialización en Lenguas Indígenas (CESLI). Dominio del idioma para comunicación comunitaria, proyectos de vinculación social y proyectos interculturales.
+</p>
+</div>
+<div class="pt-3 border-t border-white/[0.06] flex items-center justify-between">
+<span class="text-xs font-mono text-[#64748b]">Credencial con Foto Digital Disponible</span>
+<button class="text-xs font-mono text-[#38bdf8] hover:text-white inline-flex items-center gap-1" onclick="openCertModal('Certificación de Suficiencia — Idioma Kichwa', 'CESLI (Centro de Estudios Superior)', 'Certificación Oficial')">
+<span>Abrir Credencial Fotográfica</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 06. IDIOMAS & COMUNICACIÓN -->
+<section class="py-16 border-b border-white/[0.08]">
+<div class="max-w-3xl mb-10">
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">06 // Competencia Lingüística</div>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-[#f8fafc]">Perfil Trilingüe y Comunicación Técnica</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Spanish -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07]">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-mono text-[#64748b]">LENGUA MATERNA</span>
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+</div>
+<h4 class="text-lg font-bold text-[#f8fafc] mb-1">Español</h4>
+<div class="text-xs font-mono text-emerald-400 mb-3">Nativo / Fluidez Completa</div>
+<p class="text-xs text-[#94a3b8] leading-relaxed">
+Capacidad de redacción técnica exhaustiva, documentación de requerimientos funcionales, manuales de usuario y liderazgo de presentaciones a clientes.
+</p>
+</div>
+<!-- English -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07]">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-mono text-[#64748b]">NIVEL PROFESIONAL TÉCNICO</span>
+<span class="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
+</div>
+<h4 class="text-lg font-bold text-[#f8fafc] mb-1">Inglés</h4>
+<div class="text-xs font-mono text-[#38bdf8] mb-3">B1 Intermedio Técnico</div>
+<p class="text-xs text-[#94a3b8] leading-relaxed">
+Lectura fluida de documentación técnica oficial, especificaciones de arquitectura, consumo de RFCs, resolución de errores en foros globales y comunicación escrita en equipos.
+</p>
+</div>
+<!-- Kichwa -->
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.07]">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-mono text-[#64748b]">LENGUA ANCESTRAL</span>
+<span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+</div>
+<h4 class="text-lg font-bold text-[#f8fafc] mb-1">Kichwa</h4>
+<div class="text-xs font-mono text-indigo-400 mb-3">Certificado Oficial CESLI</div>
+<p class="text-xs text-[#94a3b8] leading-relaxed">
+Competencia lingüística para integración y proyectos comunitarios en la región andina con certificación de suficiencia respaldada por instituto acreditado.
+</p>
+</div>
+</div>
+</section>
+<!-- 07. CONTACTO DIRECTO -->
+<section class="py-20" id="contacto">
+<div class="max-w-3xl mb-12">
+<div class="text-[11px] font-mono text-[#38bdf8] uppercase tracking-wider mb-2 font-medium">07 // Contacto Directo</div>
+<h2 class="text-3xl font-bold tracking-tight text-[#f8fafc]">Iniciemos una conversación profesional</h2>
+<p class="text-sm text-[#94a3b8] mt-1">
+Disponible para integrarme a equipos de desarrollo de software, proyectos empresariales .NET/Angular, consultoría o nuevos retos profesionales.
+</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left: Details & Channels -->
+<div class="lg:col-span-5 space-y-6">
+<div class="p-6 rounded-xl bg-[#11131a] border border-white/[0.08] space-y-4">
+<div>
+<div class="text-[11px] font-mono text-[#64748b] uppercase">Correo Electrónico</div>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-mono text-[#f8fafc] select-all">pinchadiego8@gmail.com</span>
+<button class="text-xs font-mono px-2 py-1 rounded bg-white/[0.06] text-[#cbd5e1] hover:text-white transition-colors" onclick="navigator.clipboard.writeText('pinchadiego8@gmail.com'); this.innerText='Copiado'; setTimeout(()=&gt;this.innerText='Copiar', 2000)">
+Copiar
+</button>
+</div>
+</div>
+<div class="pt-3 border-t border-white/[0.06]">
+<div class="text-[11px] font-mono text-[#64748b] uppercase">Teléfono / WhatsApp</div>
+<div class="flex items-center justify-between mt-1">
+<span class="text-sm font-mono text-[#cbd5e1]">+593 991586128</span>
+<a class="text-xs font-mono px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 hover:text-white transition-colors" href="https://wa.me/593991586128" rel="noopener noreferrer" target="_blank">
+WhatsApp →
+</a>
+</div>
+</div>
+<div class="pt-3 border-t border-white/[0.06]">
+<div class="text-[11px] font-mono text-[#64748b] uppercase">Ubicación y Disponibilidad</div>
+<div class="text-sm text-[#cbd5e1] mt-1">Latacunga, Ecuador</div>
+<div class="text-xs text-[#64748b] mt-0.5">Modalidad: Remoto • Híbrido • Presencial según requerimiento</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<a class="flex-1 p-3 rounded-lg bg-[#11131a] border border-white/[0.07] hover:border-white/[0.14] text-center text-xs font-mono text-[#cbd5e1] hover:text-[#f8fafc] transition-all" href="https://www.linkedin.com/in/diego-fernando-pincha-lema-b41a54215/" rel="noopener noreferrer" target="_blank">
+LinkedIn →
+</a>
+<a class="flex-1 p-3 rounded-lg bg-[#11131a] border border-white/[0.07] hover:border-white/[0.14] text-center text-xs font-mono text-[#cbd5e1] hover:text-[#f8fafc] transition-all" href="https://github.com/DiegoPinch" rel="noopener noreferrer" target="_blank">
+GitHub →
+</a>
+</div>
+</div>
+<!-- Right: Executive Contact Form -->
+<div class="lg:col-span-7 p-8 rounded-2xl bg-[#11131a] border border-white/[0.08]">
+<form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-mono text-[#94a3b8] mb-1.5 uppercase" for="name">Nombre Completo</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-[#0a0b10] border border-white/[0.08] text-sm text-[#f8fafc] placeholder-[#475569] focus:outline-none focus:border-[#38bdf8] transition-colors" id="name" placeholder="Tu Nombre o Empresa" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono text-[#94a3b8] mb-1.5 uppercase" for="email">Correo Electrónico</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-[#0a0b10] border border-white/[0.08] text-sm text-[#f8fafc] placeholder-[#475569] focus:outline-none focus:border-[#38bdf8] transition-colors" id="email" placeholder="contacto@tuempresa.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono text-[#94a3b8] mb-1.5 uppercase" for="topic">Motivo del Contacto</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg bg-[#0a0b10] border border-white/[0.08] text-sm text-[#f8fafc] focus:outline-none focus:border-[#38bdf8] transition-colors" id="topic">
+<option value="lead">Oportunidad Laboral / Contratación</option>
+<option value="arch">Desarrollo de Proyecto Web / ERP</option>
+<option value="audit">Desarrollo .NET Core / Angular / APIs</option>
+<option value="other">Otro asunto profesional</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-mono text-[#94a3b8] mb-1.5 uppercase" for="message">Mensaje / Detalle de la propuesta</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-[#0a0b10] border border-white/[0.08] text-sm text-[#f8fafc] placeholder-[#475569] focus:outline-none focus:border-[#38bdf8] transition-colors resize-none" id="message" placeholder="Cuéntame sobre el puesto, proyecto o tecnologías requeridas..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3 px-5 rounded-lg bg-[#f8fafc] text-[#0a0b10] text-xs font-semibold uppercase tracking-wider hover:bg-white hover:shadow-lg transition-all flex items-center justify-center gap-2" type="submit">
+<span>Enviar Mensaje a Diego</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+<!-- Feedback Notice -->
+<div class="hidden p-3 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs flex items-center gap-2" id="form-feedback">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Mensaje enviado correctamente. Te responderé a la brevedad.</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- REFINED FOOTER -->
+<footer class="w-full border-t border-white/[0.07] bg-[#07080c] py-10">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#64748b]">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Diego Fernando Pincha Lema © 2026. Ingeniero de Software — Soluciones Tecnológicas.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-[#f8fafc] transition-colors" href="#">Volver arriba ↑</a>
+<span>Latacunga, Ecuador</span>
+<span class="text-white/[0.2]">|</span>
+<span>UTA Software Engineering</span>
+</div>
+</div>
+</footer>
+<script>
+function openCertModal(title, issuer, year) {
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-name').innerText = title;
+  document.getElementById('modal-issuer').innerText = issuer;
+  document.getElementById('modal-year').innerText = year;
+  document.getElementById('cert-modal').classList.remove('hidden');
+}
+</script>
+</body></html>

@@ -1,0 +1,21 @@
+---
+import { experience } from '../data/experience';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import EducationCard from '../components/EducationCard.astro';
+---
+
+<section id="experiencia" aria-labelledby="experience-title" class="section">
+  <SectionHeader heading={headings.experience} id="experience-title" />
+  <div class="grid gap-6 lg:grid-cols-12">
+    <ol aria-label="Experiencia profesional" class="space-y-6 lg:col-span-7">
+      {experience.map((entry) => (
+        <TimelineItem entry={entry} />
+      ))}
+    </ol>
+    <div class="lg:col-span-5">
+      <EducationCard />
+    </div>
+  </div>
+</section>

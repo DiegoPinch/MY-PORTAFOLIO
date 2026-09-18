@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { profile } from '../data/profile';
+---
+
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={profile.summary} />
+    <meta name="theme-color" content="#0a0b10" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${profile.name} — ${profile.role}`} />
+    <meta property="og:description" content={profile.headline} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{profile.name} — {profile.role}</title>
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      try {
+        const saved = localStorage.getItem('portfolio-theme');
+        document.documentElement.dataset.theme =
+          saved === 'light' || saved === 'dark'
+            ? saved
+            : matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+      } catch {
+        /* El tema oscuro permanece disponible sin almacenamiento. */
+      }
+    </script>
+  </head>
+  <body class="font-sans">
+    <a
+      href="#contenido"
+      class="fixed left-4 top-4 z-60 -translate-y-24 rounded-lg bg-heading px-5 py-3 text-sm text-canvas focus:translate-y-0"
+    >
+      Saltar al contenido
+    </a>
+    <Header />
+    <main id="contenido" class="page-container" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../scripts/site';
+    </script>
+  </body>
+</html>

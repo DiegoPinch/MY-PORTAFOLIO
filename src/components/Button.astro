@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro';
+import type { IconName } from '../types/content';
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  icon?: IconName;
+  external?: boolean;
+  class?: string;
+}
+const { href, variant = 'primary', icon, external, class: className } = Astro.props;
+---
+
+<a
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+  class:list={[
+    'glow-link inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-5 py-3 text-xs font-semibold tracking-wide transition-colors',
+    variant === 'primary'
+      ? 'border-heading bg-heading text-canvas hover:opacity-85'
+      : 'border-line bg-card text-heading hover:border-accent/50',
+    className,
+  ]}
+>
+  <slot />
+  {icon && <Icon name={icon} size={16} />}
+</a>

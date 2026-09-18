@@ -1,0 +1,15 @@
+---
+import { techStack } from '../data/skills';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import TechStackCard from '../components/TechStackCard.astro';
+---
+
+<section id="stack" aria-labelledby="stack-title" class="section">
+  <SectionHeader heading={headings.stack} id="stack-title" />
+  <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+    {techStack.map((category) => (
+      <TechStackCard category={category} />
+    ))}
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import { music } from '../data/personal';
+import { headings } from '../data/sections';
+import SectionHeader from '../components/SectionHeader.astro';
+import Card from '../components/Card.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
+---
+
+{music.length > 0 && (
+  <section id="musica" aria-labelledby="music-title" class="section">
+    <SectionHeader heading={headings.music} id="music-title" />
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {music.map((track) => (
+        <Card class="p-5">
+          {track.cover && <ResponsiveImage image={track.cover} fallback={track.title} />}
+          <h3 class="mt-4 font-semibold text-heading">
+            <a href={track.url} target="_blank" rel="noopener noreferrer" class="hover:text-accent">
+              {track.title} ↗
+            </a>
+          </h3>
+          <p class="mt-2 text-sm">{track.artist}</p>
+        </Card>
+      ))}
+    </div>
+  </section>
+)}
